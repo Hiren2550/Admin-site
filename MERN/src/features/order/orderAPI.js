@@ -18,3 +18,17 @@ export function fetchAllOrders() {
     resolve({ data });
   });
 }
+
+export function deleteOrder(orderId) {
+  return new Promise(async (resolve) => {
+    const response = await fetch("http://localhost:8080/orders/" + orderId, {
+      method: "DELETE",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(orderId),
+    });
+    const data = await response.json();
+    resolve({ data });
+  });
+}

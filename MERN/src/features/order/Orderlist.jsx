@@ -1,13 +1,19 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllOrdersAsync, selectAllOrders } from "./orderSlice";
+import {
+  deleteOrderAsync,
+  fetchAllOrdersAsync,
+  selectAllOrders,
+} from "./orderSlice";
 import { CiEdit } from "react-icons/ci";
 import { MdDeleteOutline } from "react-icons/md";
 
 const Orderlist = () => {
   const dispatch = useDispatch();
   const orders = useSelector(selectAllOrders);
-  console.log(orders);
+  const handleDelete = (e, orderId) => {
+    dispatch(deleteOrderAsync(orderId));
+  };
   useEffect(() => {
     dispatch(fetchAllOrdersAsync());
   }, [dispatch]);
@@ -61,6 +67,7 @@ const Orderlist = () => {
                   <tr className="" key={order.id}>
                     <td className="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-600 sm:px-3 lg:table-cell">
                       <MdDeleteOutline
+                        onClick={(e) => handleDelete(e, order.id)}
                         className="text-gray-700 cursor-pointer"
                         size={26}
                       />

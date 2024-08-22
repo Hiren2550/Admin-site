@@ -4,7 +4,7 @@ import Sidebar from "../features/Product-list/components/Sidebar";
 
 export const Adminorderpage = () => {
   return (
-    <div className="flex h-screen w-auto bg-gray-100">
+    <div className=" w-dvw flex h-screen  bg-gray-100">
       {/* sidebar */}
       <Sidebar />
       {/* Main content */}

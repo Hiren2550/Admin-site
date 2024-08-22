@@ -24,6 +24,7 @@ import {
 import Pagination from "../../../Pagination";
 import { Link } from "react-router-dom";
 import {
+  deleteProductAsync,
   fetchAllBrandsAsync,
   fetchAllCategoriesAsync,
   fetchAllProductsByFilterAsync,
@@ -339,22 +340,33 @@ const Productlist = () => {
 
 function Productgrid() {
   const products = useSelector(selectAllProducts);
-
+  const dispatch = useDispatch();
+  const productDelete = (e, productId) => {
+    dispatch(deleteProductAsync(productId));
+  };
+  const productEdit = (e, productId) => {
+    console.log(productId);
+  };
   return (
     <div className="lg:col-span-3">
       <div className="bg-white">
         <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
           <div className="mt-2  grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-4">
             {products.map((product) => (
-              <div>
+              <div key={product.id}>
                 <button
                   type="submit"
-                  onClick={() => {
-                    console.log(product.id);
-                  }}
+                  onClick={(e) => productEdit(e, product.id)}
                   className="rounded-md my-2 bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Edit
+                </button>
+                <button
+                  type="submit"
+                  onClick={(e) => productDelete(e, product.id)}
+                  className="float-end rounded-md mx-2 my-2 bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+                >
+                  Delete
                 </button>
                 <Link
                   to={`/productdetails/${product.id}`}

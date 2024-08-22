@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { createOrder, fetchAllOrders } from "./orderAPI";
+import { createOrder, deleteOrder, fetchAllOrders } from "./orderAPI";
 
 const initialState = {
   orders: [],
@@ -22,6 +22,14 @@ export const fetchAllOrdersAsync = createAsyncThunk(
     const response = await fetchAllOrders();
     // console.log(response.data);
     return response.data;
+  }
+);
+export const deleteOrderAsync = createAsyncThunk(
+  "order/deleteOrder",
+  async (orderId) => {
+    const response = await deleteOrder(orderId);
+    // console.log(response.data);
+    return response.data.id;
   }
 );
 
@@ -48,6 +56,16 @@ const orderSlice = createSlice({
       })
       .addCase(fetchAllOrdersAsync.fulfilled, (state, action) => {
         (state.status = "idle"), (state.orders = action.payload);
+      })
+      .addCase(deleteOrderAsync.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(deleteOrderAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        const index = state.orders.findIndex(
+          (order) => order.id === action.payload
+        );
+        state.orders.splice(index, 1);
       });
   },
 });

@@ -53,8 +53,20 @@ export function fetchAllProductsByFilter(filter, sort, pagination) {
     resolve({ data });
   });
 }
-// const test = async () => {
-//   const data = await fetchProductById(4);
-//   console.log(data);
-// };
-// test();
+
+export function deleteProduct(productId) {
+  return new Promise(async (resolve) => {
+    const response = await fetch(
+      "http://localhost:8080/products/" + productId,
+      {
+        method: "DELETE",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(productId),
+      }
+    );
+    const data = await response.json();
+    resolve({ data });
+  });
+}

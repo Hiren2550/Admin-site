@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllUsersAsync, selectUsers } from "../userSlice";
+import { deleteAsync, fetchAllUsersAsync, selectUsers } from "../userSlice";
 import profile from "../../../assets/profile.png";
 import { CiEdit } from "react-icons/ci";
 import { MdCall, MdDeleteOutline } from "react-icons/md";
@@ -9,7 +9,9 @@ import { FaLocationDot } from "react-icons/fa6";
 const Userlist = () => {
   const dispatch = useDispatch();
   const users = useSelector(selectUsers);
-  console.log(users);
+  const handleDelete = (e, id) => {
+    dispatch(deleteAsync(id));
+  };
   useEffect(() => {
     dispatch(fetchAllUsersAsync());
   }, [dispatch]);
@@ -17,7 +19,7 @@ const Userlist = () => {
     <div className="mx-auto max-w-screen-lg px-4 py-8 sm:px-8">
       <div className="flex items-center justify-between pb-6">
         <div>
-          <h2 className="font-semibold text-gray-700">User Accounts</h2>
+          <h2 className="font-bold text-3xl text-gray-700">User Accounts</h2>
         </div>
       </div>
       <div className="overflow-y-hidden rounded-lg border">
@@ -42,6 +44,7 @@ const Userlist = () => {
                     <td className="bg-white px-5 py-5 text-sm">
                       <p className="whitespace-no-wrap">
                         <MdDeleteOutline
+                          onClick={(e) => handleDelete(e, user.id)}
                           className="text-gray-700 cursor-pointer"
                           size={20}
                         />
@@ -71,7 +74,7 @@ const Userlist = () => {
                           />
                         </div>
                         <div className="ml-3">
-                          <p className="whitespace-no-wrap">Normal User</p>
+                          <p className="whitespace-no-wrap">{user.role}</p>
                         </div>
                       </div>
                     </td>
@@ -84,7 +87,7 @@ const Userlist = () => {
                           key={index}
                           className="whitespace-no-wrap text-nowrap flex flex-row items-center gap-2"
                         >
-                          <MdCall /> {address.phone}
+                          <MdCall /> {address.phone || "-"}
                         </p>
                       ))}
                     </td>
@@ -95,7 +98,7 @@ const Userlist = () => {
                           className="whitespace-no-wrap m-2 flex flex-row items-center gap-1"
                         >
                           <FaLocationDot size={12} />
-                          {address.city}
+                          {address.city || "-"}
                         </p>
                       ))}
                     </td>
