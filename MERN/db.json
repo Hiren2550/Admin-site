@@ -6481,41 +6481,7 @@
       "id": "abf7"
     }
   ],
-  "users": [
-    {
-      "id": "6eb0",
-      "name": "H10",
-      "email": "H11@gmail.com",
-      "password": "Hiren@123",
-      "addresses": [
-        {
-          "firstname": "Hiren",
-          "lastname": "Shah",
-          "email": "hirenshah2540@gmail.com",
-          "phone": "1352270452",
-          "street": "457/2670 G.H board kavinagar, Bapunagar",
-          "city": "Ahmedabad",
-          "state": "Gujarat",
-          "pincode": "380024"
-        }
-      ]
-    },
-    {
-      "id": "f436",
-      "name": "H70",
-      "email": "H71@gmail.com",
-      "password": "Raja@123",
-      "addresses": []
-    },
-    {
-      "id": "9bed",
-      "name": "H20",
-      "email": "H2@gmail.com",
-      "password": "Thank@123",
-      "addresses": [],
-      "role": "Admin"
-    }
-  ],
+  "users": [],
   "cart": [],
   "orders": [
     {
