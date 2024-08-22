@@ -19,6 +19,14 @@ export function fetchAllOrders() {
   });
 }
 
+export function fetchOrderById(orderId) {
+  return new Promise(async (resolve) => {
+    const response = await fetch("http://localhost:8080/orders/" + orderId);
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+
 export function deleteOrder(orderId) {
   return new Promise(async (resolve) => {
     const response = await fetch("http://localhost:8080/orders/" + orderId, {
@@ -28,6 +36,23 @@ export function deleteOrder(orderId) {
       },
       body: JSON.stringify(orderId),
     });
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+
+export function updateOrder(updateData) {
+  return new Promise(async (resolve) => {
+    const response = await fetch(
+      "http://localhost:8080/orders/" + updateData.id,
+      {
+        method: "PATCH",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updateData),
+      }
+    );
     const data = await response.json();
     resolve({ data });
   });
