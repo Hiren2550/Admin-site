@@ -53,18 +53,16 @@ const Userlist = () => {
                     </td>
                     <td className="bg-white px-5 py-5 text-sm">
                       <p className="whitespace-no-wrap">
-                        <CiEdit
-                          className="text-gray-700 cursor-pointer"
-                          size={20}
-                        />
+                        <Link to={`/admin/users/${user.id}`}>
+                          <CiEdit
+                            className="text-gray-700 cursor-pointer hover:text-blue-600"
+                            size={20}
+                          />
+                        </Link>
                       </p>
                     </td>
                     <td className="bg-white px-5 py-5 text-sm">
-                      <Link to={`/admin/users/${user.id}`}>
-                        <p className="whitespace-no-wrap cursor-pointer hover:underline hover:text-blue-600">
-                          {user.id}
-                        </p>
-                      </Link>
+                      <p className="whitespace-no-wrap">{user.id}</p>
                     </td>
                     <td className="bg-white px-5 py-5 text-sm">
                       <p className="whitespace-no-wrap">{user.name}</p>

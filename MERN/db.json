@@ -6484,8 +6484,8 @@
   "users": [
     {
       "id": "6eb0",
-      "name": "H1",
-      "email": "H1@gmail.com",
+      "name": "H10",
+      "email": "H11@gmail.com",
       "password": "Hiren@123",
       "addresses": [
         {
@@ -6502,15 +6502,15 @@
     },
     {
       "id": "f436",
-      "name": "Ram",
-      "email": "H1@gmail.com",
+      "name": "H70",
+      "email": "H71@gmail.com",
       "password": "Raja@123",
       "addresses": []
     },
     {
       "id": "9bed",
-      "name": "TY",
-      "email": "T1@gmail.com",
+      "name": "H20",
+      "email": "H2@gmail.com",
       "password": "Thank@123",
       "addresses": [],
       "role": "Admin"

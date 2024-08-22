@@ -17,6 +17,7 @@ const Adminprofilepage = () => {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors },
   } = useForm();
   const dispatch = useDispatch();
@@ -32,9 +33,12 @@ const Adminprofilepage = () => {
   const params = useParams();
   const user = useSelector(selectUserInfo);
   useEffect(() => {
+    setValue("name", "");
+    setValue("email", "");
     dispatch(fetchUserInfoAsync(params.id));
-    reset();
-  }, [dispatch, params.id]);
+    setValue("name", user.name);
+    setValue("email", user.email);
+  }, [dispatch, user.name, user.email, params.id]);
   return (
     <>
       {user && (
@@ -54,7 +58,7 @@ const Adminprofilepage = () => {
             <div className="p-5">
               <div className="p-3 max-w-md mx-auto">
                 <h1 className="text-3xl text-center font-semibold my-4">
-                  {user.name} Profile
+                  {user.name}-{user.email}
                 </h1>
 
                 <form
