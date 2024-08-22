@@ -5,6 +5,7 @@ import profile from "../../../assets/profile.png";
 import { CiEdit } from "react-icons/ci";
 import { MdCall, MdDeleteOutline } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Userlist = () => {
   const dispatch = useDispatch();
@@ -59,7 +60,11 @@ const Userlist = () => {
                       </p>
                     </td>
                     <td className="bg-white px-5 py-5 text-sm">
-                      <p className="whitespace-no-wrap">{user.id}</p>
+                      <Link to={`/admin/users/${user.id}`}>
+                        <p className="whitespace-no-wrap cursor-pointer hover:underline hover:text-blue-600">
+                          {user.id}
+                        </p>
+                      </Link>
                     </td>
                     <td className="bg-white px-5 py-5 text-sm">
                       <p className="whitespace-no-wrap">{user.name}</p>

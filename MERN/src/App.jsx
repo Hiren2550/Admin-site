@@ -16,6 +16,7 @@ import Logout from "./features/auth/components/Logout";
 import Admin from "./features/Product-list/components/Admin";
 import { Adminorderpage } from "./pages/Adminorderpage";
 import Adminuserpage from "./pages/Adminuserpage";
+import Adminprofilepage from "./pages/Adminprofilepage";
 
 function App() {
   return (
@@ -92,6 +93,7 @@ function App() {
         <Route path="/admin" element={<Admin />} />
         <Route path="/admin-order" element={<Adminorderpage />} />
         <Route path="/admin-user" element={<Adminuserpage />} />
+        <Route path="/admin/users/:id" element={<Adminprofilepage />} />
         <Route path="*" element={<Pagenotfound />} />
         {/* </Route> */}
       </Routes>
