@@ -13,7 +13,10 @@ import {
 } from "../features/Product-list/productSlice";
 
 export const Editproductpage = () => {
+  const product = useSelector(selectProduct);
   const [updateSuccess, setUpdateSuccess] = useState(false);
+  const [forBrand, setForBrand] = useState(product.brand);
+  const [forCategory, setForCategory] = useState(product.category);
   const brands = useSelector(selectBrands);
   const categories = useSelector(selectCategories);
   const error = useSelector(selectError);
@@ -26,13 +29,15 @@ export const Editproductpage = () => {
   } = useForm();
   const dispatch = useDispatch();
   const params = useParams();
-  const product = useSelector(selectProduct);
+
   useEffect(() => {
     setValue("title", "");
     setValue("description", "");
     setValue("price", "");
     setValue("stock", "");
     setValue("sku", "");
+    setValue("category", "");
+    setValue("brand", "");
     setValue("shippingInformation", "");
     setValue("warrantyInformation", "");
     setValue("returnPolicy", "");
@@ -55,6 +60,16 @@ export const Editproductpage = () => {
       shouldDirty: true,
     });
     setValue("sku", product.sku, { shouldValidate: true, shouldDirty: true });
+    setValue("category", product.category, {
+      shouldValidate: true,
+      shouldDirty: true,
+      shouldTouch: true,
+    });
+    setValue("brand", product.brand, {
+      shouldValidate: true,
+      shouldDirty: true,
+      shouldTouch: true,
+    });
     setValue("shippingInformation", product.shippingInformation, {
       shouldValidate: true,
       shouldDirty: true,
@@ -81,6 +96,8 @@ export const Editproductpage = () => {
         price: data.price,
         stock: data.stock,
         sku: data.sku,
+        brand: forBrand,
+        category: forCategory,
         shippingInformation: data.shippingInformation,
         warrantyInformation: data.warrantyInformation,
         returnPolicy: data.returnPolicy,
@@ -88,6 +105,13 @@ export const Editproductpage = () => {
       })
     );
     setUpdateSuccess(true);
+  };
+
+  const handleBrand = (e) => {
+    setForBrand(e.target.value);
+  };
+  const handleCategory = (e) => {
+    setForCategory(e.target.value);
   };
   return (
     <div className=" w-dvw flex h-screen  bg-gray-100">
@@ -267,7 +291,8 @@ export const Editproductpage = () => {
                           message: "category is required",
                         },
                       })}
-                      value={product.category}
+                      defaultChecked={product.category}
+                      onChange={(e) => handleCategory(e)}
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                     >
                       {categories.map((category, index) => (
@@ -292,7 +317,8 @@ export const Editproductpage = () => {
                       {...register("brand", {
                         required: { value: true, message: "brand is required" },
                       })}
-                      value={product.brand}
+                      defaultChecked={product.brand}
+                      onChange={(e) => handleBrand(e)}
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                     >
                       {brands.map((brand, index) => (

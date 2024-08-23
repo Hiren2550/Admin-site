@@ -13,7 +13,7 @@
         "beauty",
         "mascara"
       ],
-      "brand": "Essence",
+      "brand": "Maybelline",
       "sku": "RCH45Q1A",
       "weight": 2,
       "dimensions": {
@@ -64,69 +64,6 @@
       "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png"
     },
     {
-      "id": "2",
-      "title": "Eyeshadow Palette with Mirror",
-      "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
-      "category": "Beauty",
-      "price": 19.99,
-      "discountPercentage": 5.5,
-      "rating": 3.28,
-      "stock": 44,
-      "tags": [
-        "beauty",
-        "eyeshadow"
-      ],
-      "brand": "Glamour Beauty",
-      "sku": "MVCFH27F",
-      "weight": 3,
-      "dimensions": {
-        "width": 12.42,
-        "height": 8.63,
-        "depth": 29.13
-      },
-      "warrantyInformation": "1 year warranty",
-      "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
-      "reviews": [
-        {
-          "rating": 4,
-          "comment": "Very satisfied!",
-          "date": "2024-05-23T08:56:21.618Z",
-          "reviewerName": "Liam Garcia",
-          "reviewerEmail": "liam.garcia@x.dummyjson.com"
-        },
-        {
-          "rating": 1,
-          "comment": "Very disappointed!",
-          "date": "2024-05-23T08:56:21.618Z",
-          "reviewerName": "Nora Russell",
-          "reviewerEmail": "nora.russell@x.dummyjson.com"
-        },
-        {
-          "rating": 5,
-          "comment": "Highly impressed!",
-          "date": "2024-05-23T08:56:21.618Z",
-          "reviewerName": "Elena Baker",
-          "reviewerEmail": "elena.baker@x.dummyjson.com"
-        }
-      ],
-      "returnPolicy": "30 days return policy",
-      "minimumOrderQuantity": 32,
-      "meta": {
-        "createdAt": "2024-05-23T08:56:21.618Z",
-        "updatedAt": "2024-05-23T08:56:21.618Z",
-        "barcode": "2817839095220",
-        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
-      },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png",
-        "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png",
-        "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png",
-        "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
-      ],
-      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png"
-    },
-    {
       "id": "3",
       "title": "Powder Canister",
       "description": "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.",
@@ -139,7 +76,7 @@
         "beauty",
         "face powder"
       ],
-      "brand": "Velvet Touch",
+      "brand": "Maybelline",
       "sku": "9EN8WLT2",
       "weight": 8,
       "dimensions": {
@@ -202,7 +139,7 @@
         "beauty",
         "lipstick"
       ],
-      "brand": "Chic Cosmetics",
+      "brand": "Maybelline",
       "sku": "O5IF1NTA",
       "weight": 5,
       "dimensions": {
@@ -265,7 +202,7 @@
         "beauty",
         "nail polish"
       ],
-      "brand": "Nail Couture",
+      "brand": "Maybelline",
       "sku": "YUIIIP4W",
       "weight": 9,
       "dimensions": {
@@ -643,7 +580,7 @@
         "furniture",
         "beds"
       ],
-      "brand": "Annibale Colombo",
+      "brand": "Knoll",
       "sku": "4KMDTZWF",
       "weight": 3,
       "dimensions": {
@@ -706,7 +643,7 @@
         "furniture",
         "sofas"
       ],
-      "brand": "Annibale Colombo",
+      "brand": "Knoll",
       "sku": "LUU95CQP",
       "weight": 3,
       "dimensions": {
@@ -769,7 +706,7 @@
         "furniture",
         "bedside tables"
       ],
-      "brand": "Furniture Co.",
+      "brand": "Knoll",
       "sku": "OWPLTZYX",
       "weight": 10,
       "dimensions": {
@@ -895,7 +832,7 @@
         "furniture",
         "bathroom"
       ],
-      "brand": "Bath Trends",
+      "brand": "Knoll",
       "sku": "7OLTIEVO",
       "weight": 6,
       "dimensions": {
@@ -2942,7 +2879,7 @@
       "title": "Bamboo Spatula",
       "description": "The Bamboo Spatula is a versatile kitchen tool made from eco-friendly bamboo. Ideal for flipping, stirring, and serving various dishes.",
       "category": "kitchen",
-      "brand": "No",
+      "brand": "KitchenCraft",
       "price": 7.99,
       "discountPercentage": 4.85,
       "rating": 4.4,
@@ -3005,7 +2942,7 @@
       "title": "Black Aluminium Cup",
       "description": "The Black Aluminium Cup is a stylish and durable cup suitable for both hot and cold beverages. Its sleek black design adds a modern touch to your drinkware collection.",
       "category": "kitchen",
-      "brand": "No",
+      "brand": "KitchenCraft",
       "price": 5.99,
       "discountPercentage": 9.22,
       "rating": 3.62,
@@ -3068,7 +3005,7 @@
       "title": "Black Whisk",
       "description": "The Black Whisk is a kitchen essential for whisking and beating ingredients. Its ergonomic handle and sleek design make it a practical and stylish tool.",
       "category": "kitchen",
-      "brand": "No",
+      "brand": "KitchenCraft",
       "price": 9.99,
       "discountPercentage": 16.87,
       "rating": 2.88,
@@ -3131,7 +3068,7 @@
       "title": "Boxed Blender",
       "description": "The Boxed Blender is a powerful and compact blender perfect for smoothies, shakes, and more. Its convenient design and multiple functions make it a versatile kitchen appliance.",
       "category": "kitchen",
-      "brand": "No",
+      "brand": "KitchenCraft",
       "price": 39.99,
       "discountPercentage": 7.36,
       "rating": 2.73,
@@ -3446,7 +3383,7 @@
       "title": "Electric Stove",
       "description": "The Electric Stove provides a portable and efficient cooking solution. Ideal for small kitchens or as an additional cooking surface for various culinary needs.",
       "category": "kitchen",
-      "brand": "No",
+      "brand": "KitchenCraft",
       "price": 49.99,
       "discountPercentage": 16.64,
       "rating": 4.84,
@@ -4902,7 +4839,7 @@
       "tags": [
         "laptops"
       ],
-      "brand": "Asus",
+      "brand": "Snitch",
       "sku": "4A9KFMBG",
       "weight": 8,
       "dimensions": {
@@ -4964,7 +4901,7 @@
       "tags": [
         "laptops"
       ],
-      "brand": "Huawei",
+      "brand": "Acer",
       "sku": "U2CBNNB0",
       "weight": 9,
       "dimensions": {
@@ -5151,7 +5088,7 @@
         "clothing",
         "men's shirts"
       ],
-      "brand": "Fashion Trends",
+      "brand": "Levis",
       "sku": "6RJDTVCU",
       "weight": 6,
       "dimensions": {
@@ -5277,7 +5214,7 @@
         "clothing",
         "men's shirts"
       ],
-      "brand": "Classic Wear",
+      "brand": "Gigabyte",
       "sku": "TWL7HRBB",
       "weight": 1,
       "dimensions": {
@@ -5340,7 +5277,7 @@
         "clothing",
         "men's shirts"
       ],
-      "brand": "Casual Comfort",
+      "brand": "Levis",
       "sku": "KEVGVDTV",
       "weight": 2,
       "dimensions": {
@@ -5403,7 +5340,7 @@
         "clothing",
         "men's shirts"
       ],
-      "brand": "Urban Chic",
+      "brand": "Gigabyte",
       "sku": "L902AU9L",
       "weight": 1,
       "dimensions": {
@@ -5655,7 +5592,7 @@
         "footwear",
         "athletic shoes"
       ],
-      "brand": "Off White",
+      "brand": "Nike",
       "sku": "8SRWW2RM",
       "weight": 3,
       "dimensions": {
@@ -5718,7 +5655,7 @@
         "footwear",
         "casual shoes"
       ],
-      "brand": "Off White",
+      "brand": "Nike",
       "sku": "1SFJZOT2",
       "weight": 4,
       "dimensions": {
@@ -5772,7 +5709,7 @@
       "id": "93",
       "title": "Brown Leather Belt Watch",
       "description": "The Brown Leather Belt Watch is a stylish timepiece with a classic design. Featuring a genuine leather strap and a sleek dial, it adds a touch of sophistication to your look.",
-      "category": "watches",
+      "category": "kitchen",
       "price": 89.99,
       "discountPercentage": 15.01,
       "rating": 4.47,
@@ -5781,7 +5718,7 @@
         "watches",
         "leather watches"
       ],
-      "brand": "Fashion Timepieces",
+      "brand": "Longines",
       "sku": "WGZ21MSA",
       "weight": 10,
       "dimensions": {
@@ -6024,7 +5961,7 @@
       "id": "97",
       "title": "Rolex Datejust",
       "description": "The Rolex Datejust is an iconic and versatile timepiece with a date window. Known for its timeless design and reliability, it's a symbol of Rolex's watchmaking excellence.",
-      "category": "watches",
+      "category": "Fashion",
       "price": 10999.99,
       "discountPercentage": 9.69,
       "rating": 4.94,
@@ -6271,54 +6208,50 @@
         "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/3.png"
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/thumbnail.png"
-    },
-    {
-      "id": "19fc",
-      "title": "Chair",
-      "description": "Best",
-      "price": 10000,
-      "stock": 2,
-      "sku": "TYUIIO",
-      "category": "Fashion",
-      "brand": "Zara",
-      "shippingInformation": "1 days",
-      "warrantyInformation": "1 years",
-      "returnPolicy": "May be",
-      "thumbnail": "https://assets.dummyjson.com/public/qr-code.png",
-      "images": [
-        "https://assets.dummyjson.com/public/qr-code.png",
-        "https://assets.dummyjson.com/public/qr-code.png",
-        "https://assets.dummyjson.com/public/qr-code.png",
-        "https://assets.dummyjson.com/public/qr-code.png"
-      ],
-      "dimensions": {
-        "width": 27.15,
-        "height": 14.43,
-        "depth": 10.05
-      },
-      "reviews": [
-        {
-          "rating": 4,
-          "comment": "Great value for money!",
-          "date": "2024-05-23T08:56:21.621Z",
-          "reviewerName": "Olivia Anderson",
-          "reviewerEmail": "olivia.anderson@x.dummyjson.com"
-        }
-      ]
     }
   ],
   "brands": [
     {
-      "value": "Canon",
-      "label": "Canon",
+      "value": "Gucci",
+      "label": "Gucci",
       "checked": false,
-      "id": "1c5b"
+      "id": "bd4e"
     },
     {
-      "value": "OPPO",
-      "label": "OPPO",
+      "value": "Chanel",
+      "label": "Chanel",
       "checked": false,
-      "id": "3de4"
+      "id": "54dd"
+    },
+    {
+      "value": "Dior",
+      "label": "Dior",
+      "checked": false,
+      "id": "4e88"
+    },
+    {
+      "value": "Maybelline",
+      "label": "Maybelline",
+      "checked": false,
+      "id": "4bc1"
+    },
+    {
+      "value": "Gigabyte",
+      "label": "Gigabyte",
+      "checked": false,
+      "id": "5ef7"
+    },
+    {
+      "value": "Knoll",
+      "label": "Knoll",
+      "checked": false,
+      "id": "a590"
+    },
+    {
+      "value": "Dell",
+      "label": "Dell",
+      "checked": false,
+      "id": "2c14"
     },
     {
       "value": "Apple",
@@ -6344,12 +6277,7 @@
       "checked": false,
       "id": "3a14"
     },
-    {
-      "value": "Zara",
-      "label": "Zara",
-      "checked": false,
-      "id": "8f5a"
-    },
+    
     {
       "value": "Levis",
       "label": "Levis",
@@ -6363,67 +6291,31 @@
       "id": "01b9"
     },
     {
+      "value": "Longines",
+      "label": "Longines",
+      "checked": false,
+      "id": "f89f"
+    },
+    {
       "value": "Nike",
       "label": "Nike",
       "checked": false,
       "id": "81b5"
     },
     {
-      "value": "Zudio",
-      "label": "Zudio",
+      "value": "Puma",
+      "label": "Puma",
       "checked": false,
-      "id": "18d2"
+      "id": "4d78"
     },
     {
-      "value": "Snitch",
-      "label": "Snitch",
+      "value": "KitchenCraft",
+      "label": "KitchenCraft",
       "checked": false,
-      "id": "1c5d"
-    },
-    {
-      "value": "Vaseline",
-      "label": "Vaseline",
-      "checked": false,
-      "id": "4c59"
-    },
-    {
-      "value": "Olay",
-      "label": "Olay",
-      "checked": false,
-      "id": "6926"
-    },
-    {
-      "value": "DJI",
-      "label": "DJI",
-      "checked": false,
-      "id": "45ea"
-    },
-    {
-      "value": "Asembly",
-      "label": "Asembly",
-      "checked": false,
-      "id": "f549"
-    },
-    {
-      "value": "No",
-      "label": "No",
-      "checked": false,
-      "id": "29e2"
+      "id": "345a"
     }
   ],
   "categories": [
-    {
-      "value": "women",
-      "label": "Women",
-      "checked": false,
-      "id": "5dd7"
-    },
-    {
-      "value": "men",
-      "label": "Men",
-      "checked": false,
-      "id": "8bc9"
-    },
     {
       "value": "fragrances",
       "label": "Fragrances",
@@ -6483,36 +6375,6 @@
       "label": "Beauty",
       "checked": false,
       "id": "ef90"
-    },
-    {
-      "value": "Electronics",
-      "label": "Electronics",
-      "checked": false,
-      "id": "f87e"
-    },
-    {
-      "value": "Decoration",
-      "label": "Decoration",
-      "checked": false,
-      "id": "0fb7"
-    },
-    {
-      "value": "Computer",
-      "label": "Computer",
-      "checked": false,
-      "id": "86a6"
-    },
-    {
-      "value": "Equipments",
-      "label": "Equipments",
-      "checked": false,
-      "id": "5ffc"
-    },
-    {
-      "value": "Phones",
-      "label": "Phones",
-      "checked": false,
-      "id": "abf7"
     }
   ],
   "users": [
