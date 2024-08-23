@@ -40,7 +40,7 @@ const Sidebar = () => {
               Back to Normal user
             </Link>
             <Link
-              to={"/admin-user"}
+              to={"/admin/users"}
               className="flex items-center gap-3 px-4 py-2 text-gray-100 hover:bg-gray-700"
             >
               <svg
@@ -70,7 +70,7 @@ const Sidebar = () => {
               Products
             </Link>
             <Link
-              to={"/admin-order"}
+              to={"/admin/orders"}
               className="flex gap-2 items-center px-4 py-2 text-gray-100 hover:bg-gray-700"
             >
               <FaCartShopping size={25} className="text-gray-400" />

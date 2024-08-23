@@ -17,6 +17,7 @@ import Adminuserpage from "./pages/Adminuserpage";
 import Adminprofilepage from "./pages/Adminprofilepage";
 import { Adminorderpage } from "./pages/Adminorderpage";
 import Admin from "./pages/Admin";
+import { Addproductpage } from "./pages/Addproductpage";
 
 function App() {
   return (
@@ -91,8 +92,9 @@ function App() {
         />
         <Route path="/log-out" element={<Logout />} />
         <Route path="/admin/products" element={<Admin />} />
-        <Route path="/admin-order" element={<Adminorderpage />} />
-        <Route path="/admin-user" element={<Adminuserpage />} />
+        <Route path="/admin/add-product" element={<Addproductpage />} />
+        <Route path="/admin/orders" element={<Adminorderpage />} />
+        <Route path="/admin/users" element={<Adminuserpage />} />
         <Route path="/admin/users/:id" element={<Adminprofilepage />} />
         <Route path="*" element={<Pagenotfound />} />
         {/* </Route> */}
