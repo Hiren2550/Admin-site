@@ -43,6 +43,20 @@ const Orderlist = () => {
     reset();
     setOpen(!open);
   };
+  const chooseColor = (status) => {
+    switch (status) {
+      case "pending":
+        return "text-purple-600 bg-purple-200";
+      case "dispatched":
+        return "text-blue-600 bg-blue-200";
+      case "delivered":
+        return "text-green-600 bg-green-200";
+      case "cancelled":
+        return "text-red-600 bg-red-200";
+      default:
+        return "text-gray-800 bg-gray-200";
+    }
+  };
   return (
     <>
       <div className="w-auto bg-gray-200">
@@ -60,6 +74,7 @@ const Orderlist = () => {
               className="border rounded-md"
               onChange={(e) => handleChange(e)}
             >
+              <option value="">--Select--</option>
               <option value="pending">Pending</option>
               <option value="dispatched">Dispatched</option>
               <option value="delivered">Delivered</option>
@@ -182,7 +197,11 @@ const Orderlist = () => {
                     </td>
 
                     <td className="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-3 lg:table-cell">
-                      <span className="ml-2 mr-3 whitespace-nowrap rounded-full bg-purple-100 px-2 py-0.5 text-purple-800">
+                      <span
+                        className={` ${chooseColor(
+                          order.status
+                        )} ml-2 mr-3 whitespace-nowrap rounded-full px-2 py-0.5`}
+                      >
                         {order.status}
                       </span>
                     </td>

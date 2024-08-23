@@ -16,6 +16,20 @@ const Myorder = () => {
   useEffect(() => {
     dispatch(fetchLoggedInUserOrdersAsync(user.id));
   }, [dispatch, user.id]);
+  const chooseColor = (status) => {
+    switch (status) {
+      case "pending":
+        return "text-purple-600";
+      case "dispatched":
+        return "text-blue-600";
+      case "delivered":
+        return "text-green-600";
+      case "cancelled":
+        return "text-red-600";
+      default:
+        return "text-gray-800";
+    }
+  };
   return (
     <>
       {!userOrders.length && <Loading />}
@@ -28,7 +42,9 @@ const Myorder = () => {
             <div className="w-full mt-2 max-w-7xl px-4 md:px-5 lg-6 mx-auto">
               <h2 className="font-manrope font-bold text-xl sm:text-2xl leading-10 text-black mb-2">
                 Order #{order.id}{" "}
-                <p className="text-gray-700 font-bold text-xl">
+                <p
+                  className={` ${chooseColor(order.status)} font-bold text-xl`}
+                >
                   Order Status : {order.status}
                 </p>
               </h2>

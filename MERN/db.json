@@ -71,7 +71,7 @@
       "price": 14.99,
       "discountPercentage": 18.14,
       "rating": 3.82,
-      "stock": 59,
+      "stock": 0,
       "tags": [
         "beauty",
         "face powder"
@@ -6739,7 +6739,7 @@
         "state": "Gujarat",
         "pincode": "380024"
       },
-      "status": "confirm"
+      "status": "delivered"
     },
     {
       "id": "0036",
@@ -6954,7 +6954,7 @@
         "state": "Gujarat",
         "pincode": "380024"
       },
-      "status": "pending"
+      "status": "dispatched"
     },
     {
       "id": "823f",
@@ -7067,7 +7067,7 @@
         "state": "Mumbai",
         "pincode": "456702"
       },
-      "status": "delivered"
+      "status": "pending"
     }
   ]
 }

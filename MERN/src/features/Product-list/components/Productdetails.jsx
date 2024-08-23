@@ -329,27 +329,31 @@ const Productdetails = () => {
                     </fieldset>
                   </div>
 
-                  <button
-                    type="button"
-                    onClick={handlecart}
-                    className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                  >
-                    Add to Cart
-                  </button>
-                  <div className="mt-3 flex justify-center text-center text-sm text-gray-500">
-                    <p>
-                      or{" "}
-                      <Link to={"/"}>
-                        <button
-                          type="button"
-                          className="font-medium text-indigo-600 hover:text-indigo-500"
-                        >
-                          Continue Shopping
-                          <span aria-hidden="true"> &rarr;</span>
-                        </button>
-                      </Link>
-                    </p>
-                  </div>
+                  {product && product.stock > 0 && (
+                    <>
+                      <button
+                        type="button"
+                        onClick={handlecart}
+                        className={`mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2`}
+                      >
+                        Add to Cart
+                      </button>
+                      <div className="mt-3 flex justify-center text-center text-sm text-gray-500">
+                        <p>
+                          or{" "}
+                          <Link to={"/"}>
+                            <button
+                              type="button"
+                              className="font-medium text-indigo-600 hover:text-indigo-500"
+                            >
+                              Continue Shopping
+                              <span aria-hidden="true"> &rarr;</span>
+                            </button>
+                          </Link>
+                        </p>
+                      </div>
+                    </>
+                  )}
                 </form>
               </div>
 
