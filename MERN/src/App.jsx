@@ -26,7 +26,6 @@ function App() {
       <Routes>
         <Route path="/signup" element={<Signuppage />} />
         <Route path="/login" element={<Loginpage />} />
-        {/* <Route element={<PrivateRoute />}> */}
         <Route
           path="/"
           element={
@@ -92,12 +91,63 @@ function App() {
           }
         />
         <Route path="/log-out" element={<Logout />} />
-        <Route path="/admin/products" element={<Admin />} />
-        <Route path="/admin/add-product" element={<Addproductpage />} />
-        <Route path="/admin/edit-product/:id" element={<Editproductpage />} />
-        <Route path="/admin/orders" element={<Adminorderpage />} />
-        <Route path="/admin/users" element={<Adminuserpage />} />
-        <Route path="/admin/users/:id" element={<Adminprofilepage />} />
+        {/* Now the Route for Only Admin user */}
+        <Route
+          path="/admin"
+          element={
+            <PrivateRoute>
+              <Admin />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/products"
+          element={
+            <PrivateRoute>
+              <Admin />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/add-product"
+          element={
+            <PrivateRoute>
+              <Addproductpage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/edit-product/:id"
+          element={
+            <PrivateRoute>
+              <Editproductpage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/orders"
+          element={
+            <PrivateRoute>
+              <Adminorderpage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/users"
+          element={
+            <PrivateRoute>
+              <Adminuserpage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/users/:id"
+          element={
+            <PrivateRoute>
+              <Adminprofilepage />
+            </PrivateRoute>
+          }
+        />
         <Route path="*" element={<Pagenotfound />} />
         {/* </Route> */}
       </Routes>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import Sidebar from "../features/Product-list/components/Sidebar";
@@ -13,6 +13,7 @@ import {
 } from "../features/Product-list/productSlice";
 
 export const Editproductpage = () => {
+  const [updateSuccess, setUpdateSuccess] = useState(false);
   const brands = useSelector(selectBrands);
   const categories = useSelector(selectCategories);
   const error = useSelector(selectError);
@@ -26,7 +27,6 @@ export const Editproductpage = () => {
   const dispatch = useDispatch();
   const params = useParams();
   const product = useSelector(selectProduct);
-  console.log(product);
   useEffect(() => {
     setValue("title", "");
     setValue("description", "");
@@ -72,7 +72,6 @@ export const Editproductpage = () => {
       shouldDirty: true,
     });
   }, [dispatch, product.title, params.id]);
-  console.log(product);
   const handleEditProduct = (data) => {
     dispatch(
       editProductAsync({
@@ -88,6 +87,7 @@ export const Editproductpage = () => {
         thumbnail: data.thumbnail,
       })
     );
+    setUpdateSuccess(true);
   };
   return (
     <div className=" w-dvw flex h-screen  bg-gray-100">
@@ -267,6 +267,7 @@ export const Editproductpage = () => {
                           message: "category is required",
                         },
                       })}
+                      value={product.category}
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                     >
                       {categories.map((category, index) => (
@@ -291,6 +292,7 @@ export const Editproductpage = () => {
                       {...register("brand", {
                         required: { value: true, message: "brand is required" },
                       })}
+                      value={product.brand}
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                     >
                       {brands.map((brand, index) => (
@@ -426,6 +428,11 @@ export const Editproductpage = () => {
                   Update
                 </button>
               </div>
+              {updateSuccess && (
+                <p className="text-green-500 mt-2">
+                  User is updated successfully
+                </p>
+              )}
               {error && <p className="text-xs text-red-600">{error.message}</p>}
             </form>
           </div>

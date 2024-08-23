@@ -6274,17 +6274,17 @@
     },
     {
       "id": "19fc",
-      "title": "Table",
-      "description": "good",
-      "price": 10,
-      "stock": 1,
-      "sku": "ZZZZZZZ",
+      "title": "Chair",
+      "description": "Best",
+      "price": 10000,
+      "stock": 2,
+      "sku": "TYUIIO",
       "category": "Fashion",
       "brand": "Zara",
       "shippingInformation": "1 days",
       "warrantyInformation": "1 years",
       "returnPolicy": "May be",
-      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png",
+      "thumbnail": "https://assets.dummyjson.com/public/qr-code.png",
       "images": [
         "https://assets.dummyjson.com/public/qr-code.png",
         "https://assets.dummyjson.com/public/qr-code.png",
@@ -6575,7 +6575,7 @@
     },
     {
       "id": "4114",
-      "name": "Vivek D.",
+      "name": "Vivek ",
       "email": "VivekD23@gmail.com",
       "password": "Dkvivek@12",
       "addresses": [],
@@ -6596,6 +6596,16 @@
           "city": "Ahmedabad",
           "state": "Gujarat",
           "pincode": "380024"
+        },
+        {
+          "firstname": "Manager",
+          "lastname": "Sir",
+          "email": "Sir12@gmail.com",
+          "phone": "9090788765",
+          "street": "Main Branch",
+          "city": "Mumbai",
+          "state": "Mumbai",
+          "pincode": "456702"
         }
       ],
       "role": "Admin"
@@ -6622,109 +6632,6 @@
   ],
   "cart": [],
   "orders": [
-    {
-      "id": "5c9e",
-      "items": [
-        {
-          "id": "a60a",
-          "title": "Powder Canister",
-          "description": "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.",
-          "category": "Beauty",
-          "price": 14.99,
-          "discountPercentage": 18.14,
-          "rating": 3.82,
-          "stock": 59,
-          "tags": [
-            "beauty",
-            "face powder"
-          ],
-          "brand": "Velvet Touch",
-          "sku": "9EN8WLT2",
-          "weight": 8,
-          "dimensions": {
-            "width": 24.16,
-            "height": 10.7,
-            "depth": 11.07
-          },
-          "warrantyInformation": "2 year warranty",
-          "shippingInformation": "Ships in 1-2 business days",
-          "availabilityStatus": "In Stock",
-          "reviews": [
-            {
-              "rating": 5,
-              "comment": "Very happy with my purchase!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "Ethan Thompson",
-              "reviewerEmail": "ethan.thompson@x.dummyjson.com"
-            },
-            {
-              "rating": 4,
-              "comment": "Great value for money!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "Levi Hicks",
-              "reviewerEmail": "levi.hicks@x.dummyjson.com"
-            },
-            {
-              "rating": 5,
-              "comment": "Highly impressed!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "Hazel Gardner",
-              "reviewerEmail": "hazel.gardner@x.dummyjson.com"
-            }
-          ],
-          "returnPolicy": "60 days return policy",
-          "minimumOrderQuantity": 25,
-          "meta": {
-            "createdAt": "2024-05-23T08:56:21.618Z",
-            "updatedAt": "2024-05-23T08:56:21.618Z",
-            "barcode": "0516267971277",
-            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
-          },
-          "images": [
-            "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png",
-            "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png",
-            "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png",
-            "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png"
-          ],
-          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png",
-          "quantity": 1,
-          "user": "845b"
-        }
-      ],
-      "user": {
-        "id": "845b",
-        "name": "Yug",
-        "email": "Yug1@gmail.com",
-        "password": "Yug@12345",
-        "addresses": [
-          {
-            "firstname": "Hiren",
-            "lastname": "Shah",
-            "email": "hirenshah2540@gmail.com",
-            "phone": "8352270452",
-            "street": "457/2670 G.H board kavinagar, Bapunagar",
-            "city": "Ahmedabad",
-            "state": "Gujarat",
-            "pincode": "380024"
-          }
-        ],
-        "role": "Normal User "
-      },
-      "totalAmount": 14.99,
-      "totalQuantity": 1,
-      "paymentMethod": "cash",
-      "selectedAddress": {
-        "firstname": "Hiren",
-        "lastname": "Shah",
-        "email": "hirenshah2540@gmail.com",
-        "phone": "8352270452",
-        "street": "457/2670 G.H board kavinagar, Bapunagar",
-        "city": "Ahmedabad",
-        "state": "Gujarat",
-        "pincode": "380024"
-      },
-      "status": "Confirm"
-    },
     {
       "id": "b5ea",
       "items": [
@@ -6928,6 +6835,118 @@
         "city": "Ahmedabad",
         "state": "Gujarat",
         "pincode": "380024"
+      },
+      "status": "confirm"
+    },
+    {
+      "id": "0036",
+      "items": [
+        {
+          "id": "b889",
+          "title": "Apple",
+          "description": "Fresh and crisp apples, perfect for snacking or incorporating into various recipes.",
+          "category": "groceries",
+          "price": 1.99,
+          "brand": "No",
+          "discountPercentage": 1.97,
+          "rating": 2.96,
+          "stock": 9,
+          "tags": [
+            "fruits"
+          ],
+          "sku": "QTROUV79",
+          "weight": 8,
+          "dimensions": {
+            "width": 8.29,
+            "height": 5.58,
+            "depth": 12.41
+          },
+          "warrantyInformation": "2 year warranty",
+          "shippingInformation": "Ships in 2 weeks",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 4,
+              "comment": "Great product!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Logan Lee",
+              "reviewerEmail": "logan.lee@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Great product!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Elena Long",
+              "reviewerEmail": "elena.long@x.dummyjson.com"
+            },
+            {
+              "rating": 1,
+              "comment": "Not as described!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Grayson Coleman",
+              "reviewerEmail": "grayson.coleman@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "60 days return policy",
+          "minimumOrderQuantity": 44,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.620Z",
+            "updatedAt": "2024-05-23T08:56:21.620Z",
+            "barcode": "2517819903837",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/groceries/Apple/1.png",
+            "https://cdn.dummyjson.com/products/images/groceries/Apple/1.png",
+            "https://cdn.dummyjson.com/products/images/groceries/Apple/1.png",
+            "https://cdn.dummyjson.com/products/images/groceries/Apple/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Apple/thumbnail.png",
+          "quantity": 2,
+          "user": "b48b"
+        }
+      ],
+      "user": {
+        "id": "b48b",
+        "name": "Sir Manager",
+        "email": "admin1@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "firstname": "senior",
+            "lastname": "manager",
+            "email": "admin1@gmail.com",
+            "phone": "7890456789",
+            "street": "Office",
+            "city": "Ahmedabad",
+            "state": "Gujarat",
+            "pincode": "380024"
+          },
+          {
+            "firstname": "Manager",
+            "lastname": "Sir",
+            "email": "Sir12@gmail.com",
+            "phone": "9090788765",
+            "street": "Main Branch",
+            "city": "Mumbai",
+            "state": "Mumbai",
+            "pincode": "456702"
+          }
+        ],
+        "role": "Admin"
+      },
+      "totalAmount": 3.98,
+      "totalQuantity": 2,
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "firstname": "Manager",
+        "lastname": "Sir",
+        "email": "Sir12@gmail.com",
+        "phone": "9090788765",
+        "street": "Main Branch",
+        "city": "Mumbai",
+        "state": "Mumbai",
+        "pincode": "456702"
       },
       "status": "confirm"
     }

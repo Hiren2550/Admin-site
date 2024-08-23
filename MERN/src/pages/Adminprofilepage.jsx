@@ -59,7 +59,7 @@ const Adminprofilepage = () => {
             <div className="p-5">
               <div className="p-3 max-w-md mx-auto">
                 <h1 className="text-3xl text-center font-semibold my-4">
-                  {user.name}-{user.email}
+                  {user.name}
                 </h1>
 
                 <form
