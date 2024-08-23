@@ -6208,6 +6208,40 @@
         "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/3.png"
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/thumbnail.png"
+    },
+    {
+      "id": "6cf2",
+      "title": "BAD",
+      "description": "Best Desk",
+      "price": 3500,
+      "stock": 2,
+      "sku": "YTRVUYT",
+      "category": "groceries",
+      "brand": "Knoll",
+      "shippingInformation": "2 days",
+      "warrantyInformation": "4 year Warranty",
+      "returnPolicy": "No",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Bed/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Bed/thumbnail.png",
+        "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Bed/thumbnail.png",
+        "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Bed/thumbnail.png",
+        "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Bed/thumbnail.png"
+      ],
+      "dimensions": {
+        "width": 27.15,
+        "height": 14.43,
+        "depth": 10.05
+      },
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.621Z",
+          "reviewerName": "Olivia Anderson",
+          "reviewerEmail": "olivia.anderson@x.dummyjson.com"
+        }
+      ]
     }
   ],
   "brands": [
@@ -6277,7 +6311,6 @@
       "checked": false,
       "id": "3a14"
     },
-    
     {
       "value": "Levis",
       "label": "Levis",
@@ -6474,16 +6507,24 @@
     },
     {
       "id": "845b",
-      "name": "Yug",
+      "name": "Yug1",
       "email": "Yug1@gmail.com",
       "password": "Yug@12345",
+      "addresses": [],
+      "role": "Normal User "
+    },
+    {
+      "id": "b8df",
+      "name": "Temp",
+      "email": "Temp1@gmail.com",
+      "password": "Temp@123",
       "addresses": [
         {
-          "firstname": "Hiren",
-          "lastname": "Shah",
-          "email": "hirenshah2540@gmail.com",
-          "phone": "8352270452",
-          "street": "457/2670 G.H board kavinagar, Bapunagar",
+          "firstname": "Temp",
+          "lastname": "Sir",
+          "email": "Temp1@gmail.com",
+          "phone": "6789456734",
+          "street": "Temp Tenaments",
           "city": "Ahmedabad",
           "state": "Gujarat",
           "pincode": "380024"
@@ -6800,6 +6841,222 @@
       "totalAmount": 3.98,
       "totalQuantity": 2,
       "paymentMethod": "cash",
+      "selectedAddress": {
+        "firstname": "Manager",
+        "lastname": "Sir",
+        "email": "Sir12@gmail.com",
+        "phone": "9090788765",
+        "street": "Main Branch",
+        "city": "Mumbai",
+        "state": "Mumbai",
+        "pincode": "456702"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "bd70",
+      "items": [
+        {
+          "id": "7399",
+          "title": "Gucci Bloom Eau de",
+          "description": "Gucci Bloom by Gucci is a floral and captivating fragrance, with notes of tuberose, jasmine, and Rangoon creeper. It's a modern and romantic scent.",
+          "category": "fragrances",
+          "price": 79.99,
+          "discountPercentage": 8.9,
+          "rating": 2.69,
+          "stock": 93,
+          "tags": [
+            "fragrances",
+            "perfumes"
+          ],
+          "brand": "Gucci",
+          "sku": "FFKZ6HOF",
+          "weight": 10,
+          "dimensions": {
+            "width": 22.28,
+            "height": 17.81,
+            "depth": 27.18
+          },
+          "warrantyInformation": "No warranty",
+          "shippingInformation": "Ships in 2 weeks",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Great value for money!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Aria Parker",
+              "reviewerEmail": "aria.parker@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Excellent quality!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Natalie Harris",
+              "reviewerEmail": "natalie.harris@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Fast shipping!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Ava Harris",
+              "reviewerEmail": "ava.harris@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "No return policy",
+          "minimumOrderQuantity": 10,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.620Z",
+            "updatedAt": "2024-05-23T08:56:21.620Z",
+            "barcode": "8232190382069",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/1.png",
+            "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/2.png",
+            "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/3.png",
+            "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/thumbnail.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/thumbnail.png",
+          "quantity": 4,
+          "user": "b8df"
+        }
+      ],
+      "user": {
+        "id": "b8df",
+        "name": "Temp",
+        "email": "Temp1@gmail.com",
+        "password": "Temp@123",
+        "addresses": [
+          {
+            "firstname": "Temp",
+            "lastname": "Sir",
+            "email": "Temp1@gmail.com",
+            "phone": "6789456734",
+            "street": "Temp Tenaments",
+            "city": "Ahmedabad",
+            "state": "Gujarat",
+            "pincode": "380024"
+          }
+        ],
+        "role": "Normal User "
+      },
+      "totalAmount": 319.96,
+      "totalQuantity": 4,
+      "paymentMethod": "online",
+      "selectedAddress": {
+        "firstname": "Temp",
+        "lastname": "Sir",
+        "email": "Temp1@gmail.com",
+        "phone": "6789456734",
+        "street": "Temp Tenaments",
+        "city": "Ahmedabad",
+        "state": "Gujarat",
+        "pincode": "380024"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "823f",
+      "items": [
+        {
+          "id": "da3b",
+          "title": "Annibale Colombo Sofa",
+          "description": "The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.",
+          "category": "furniture",
+          "price": 2499.99,
+          "discountPercentage": 18.54,
+          "rating": 3.08,
+          "stock": 16,
+          "tags": [
+            "furniture",
+            "sofas"
+          ],
+          "brand": "Knoll",
+          "sku": "LUU95CQP",
+          "weight": 3,
+          "dimensions": {
+            "width": 20.97,
+            "height": 19.11,
+            "depth": 25.81
+          },
+          "warrantyInformation": "1 month warranty",
+          "shippingInformation": "Ships overnight",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Tyler Davis",
+              "reviewerEmail": "tyler.davis@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Excellent quality!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Hannah Robinson",
+              "reviewerEmail": "hannah.robinson@x.dummyjson.com"
+            },
+            {
+              "rating": 3,
+              "comment": "Waste of money!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Madison Collins",
+              "reviewerEmail": "madison.collins@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "7 days return policy",
+          "minimumOrderQuantity": 1,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.620Z",
+            "updatedAt": "2024-05-23T08:56:21.620Z",
+            "barcode": "0426785817074",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/1.png",
+            "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/2.png",
+            "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/3.png",
+            "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/thumbnail.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/thumbnail.png",
+          "quantity": 1,
+          "user": "b48b"
+        }
+      ],
+      "user": {
+        "id": "b48b",
+        "name": "Sir Manager",
+        "email": "admin1@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "firstname": "senior",
+            "lastname": "manager",
+            "email": "admin1@gmail.com",
+            "phone": "7890456789",
+            "street": "Office",
+            "city": "Ahmedabad",
+            "state": "Gujarat",
+            "pincode": "380024"
+          },
+          {
+            "firstname": "Manager",
+            "lastname": "Sir",
+            "email": "Sir12@gmail.com",
+            "phone": "9090788765",
+            "street": "Main Branch",
+            "city": "Mumbai",
+            "state": "Mumbai",
+            "pincode": "456702"
+          }
+        ],
+        "role": "Admin"
+      },
+      "totalAmount": 2499.99,
+      "totalQuantity": 1,
+      "paymentMethod": "online",
       "selectedAddress": {
         "firstname": "Manager",
         "lastname": "Sir",

@@ -63,12 +63,10 @@ export const Editproductpage = () => {
     setValue("category", product.category, {
       shouldValidate: true,
       shouldDirty: true,
-      shouldTouch: true,
     });
     setValue("brand", product.brand, {
       shouldValidate: true,
       shouldDirty: true,
-      shouldTouch: true,
     });
     setValue("shippingInformation", product.shippingInformation, {
       shouldValidate: true,
@@ -86,7 +84,7 @@ export const Editproductpage = () => {
       shouldValidate: true,
       shouldDirty: true,
     });
-  }, [dispatch, product.title, params.id]);
+  }, [dispatch, product.title, product.category, product.brand, params.id]);
   const handleEditProduct = (data) => {
     dispatch(
       editProductAsync({
@@ -104,6 +102,8 @@ export const Editproductpage = () => {
         thumbnail: data.thumbnail,
       })
     );
+    setForBrand(null);
+    setForCategory(null);
     setUpdateSuccess(true);
   };
 
