@@ -14,6 +14,7 @@ const initialState = {
   categories: [],
   brands: [],
   product: {},
+  error: null,
   status: "idle",
 };
 
@@ -126,6 +127,11 @@ const productSlice = createSlice({
       .addCase(addProductAsync.fulfilled, (state, action) => {
         state.status = "idle";
         state.products.push(action.payload);
+        state.error = null;
+      })
+      .addCase(addProductAsync.rejected, (state) => {
+        state.status = "idle";
+        state.error = action.error;
       });
   },
 });

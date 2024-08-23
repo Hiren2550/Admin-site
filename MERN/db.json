@@ -6271,6 +6271,40 @@
         "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/3.png"
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/thumbnail.png"
+    },
+    {
+      "id": "19fc",
+      "title": "Bag",
+      "description": "Best",
+      "price": 3400,
+      "stock": 1,
+      "sku": "YTRE6y",
+      "category": "Fashion",
+      "brand": "Zara",
+      "shippingInformation": "7 days",
+      "warrantyInformation": "2 years",
+      "returnPolicy": "NO",
+      "thumbnail": "https://assets.dummyjson.com/public/qr-code.png",
+      "images": [
+        "https://assets.dummyjson.com/public/qr-code.png",
+        "https://assets.dummyjson.com/public/qr-code.png",
+        "https://assets.dummyjson.com/public/qr-code.png",
+        "https://assets.dummyjson.com/public/qr-code.png"
+      ],
+      "dimensions": {
+        "width": 27.15,
+        "height": 14.43,
+        "depth": 10.05
+      },
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.621Z",
+          "reviewerName": "Olivia Anderson",
+          "reviewerEmail": "olivia.anderson@x.dummyjson.com"
+        }
+      ]
     }
   ],
   "brands": [

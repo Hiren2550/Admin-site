@@ -41,7 +41,7 @@ const Orderlist = () => {
   return (
     <>
       <div className="w-auto bg-gray-200">
-        <h1 className="mt-2 px-2 pt-4 ml-2 text-2xl font-bold text-gray-900">
+        <h1 className="mt-2 text-3xl px-2 pt-4 ml-2  font-bold text-gray-900">
           Order Management
         </h1>
         {open && (
