@@ -38,6 +38,11 @@ const Orderlist = () => {
     reset();
     setOpen(!open);
   };
+  const handleChange = (e) => {
+    dispatch(updateOrderAsync({ ...order, status: e.target.value }));
+    reset();
+    setOpen(!open);
+  };
   return (
     <>
       <div className="w-auto bg-gray-200">
@@ -48,9 +53,18 @@ const Orderlist = () => {
           <form
             noValidate
             method="POST"
-            className="max-w-lg gap-4 p-2 flex flex-row items-center"
+            className="w-auto gap-4 p-2 flex flex-row items-center"
             onSubmit={handleSubmit(handleForm)}
           >
+            <select
+              className="border rounded-md"
+              onChange={(e) => handleChange(e)}
+            >
+              <option value="pending">Pending</option>
+              <option value="dispatched">Dispatched</option>
+              <option value="delivered">Delivered</option>
+              <option value="cancelled">Cancelled</option>
+            </select>
             <label
               htmlFor="status"
               className="block mt-1 font-medium leading-6 text-gray-900"
@@ -73,6 +87,7 @@ const Orderlist = () => {
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
+
               <p className="mt-1 text-xs text-gray-600">
                 {errors.status?.message}
               </p>
@@ -81,7 +96,7 @@ const Orderlist = () => {
             <div>
               <button
                 type="submit"
-                className=" flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className=" flex max-w-lg justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Update Status
               </button>

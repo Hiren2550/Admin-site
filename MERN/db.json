@@ -6636,7 +6636,7 @@
         "state": "Gujarat",
         "pincode": "380024"
       },
-      "status": "pending"
+      "status": "dispatched"
     },
     {
       "id": "e49c",
@@ -6851,7 +6851,7 @@
         "state": "Mumbai",
         "pincode": "456702"
       },
-      "status": "pending"
+      "status": "dispatched"
     },
     {
       "id": "bd70",
@@ -7067,7 +7067,7 @@
         "state": "Mumbai",
         "pincode": "456702"
       },
-      "status": "confirm"
+      "status": "delivered"
     }
   ]
 }
