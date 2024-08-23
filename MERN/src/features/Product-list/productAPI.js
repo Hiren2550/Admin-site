@@ -73,13 +73,29 @@ export function deleteProduct(productId) {
 
 export function addProduct(productData) {
   return new Promise(async (resolve) => {
-    const response = await fetch("http://localhost:8080/products", {
+    const response = await fetch("http://localhost:8080/products/", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
       body: JSON.stringify(productData),
     });
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+export function editProduct(productData) {
+  return new Promise(async (resolve) => {
+    const response = await fetch(
+      "http://localhost:8080/products/" + productData.id,
+      {
+        method: "PATCH",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(productData),
+      }
+    );
     const data = await response.json();
     resolve({ data });
   });
