@@ -3,11 +3,16 @@ import { useState, useEffect } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { Radio, RadioGroup } from "@headlessui/react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProductByIdAsync, selectProduct } from "../productSlice";
+import {
+  fetchProductByIdAsync,
+  selectProduct,
+  selectProductListStatus,
+} from "../productSlice";
 import { Link, useParams } from "react-router-dom";
 import profile from "../../../assets/profile.png";
-import { addToCartAsync } from "../../cart/cartSlice";
+import { addToCartAsync, selectCart } from "../../cart/cartSlice";
 import { selectUserInfo } from "../../user/userSlice";
+import { RotatingLines } from "react-loader-spinner";
 
 const colors = [
   { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
@@ -34,23 +39,45 @@ const Productdetails = () => {
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [selectedSize, setSelectedSize] = useState(sizes[2]);
   const product = useSelector(selectProduct);
-  //console.log(product);
+  const items = useSelector(selectCart);
+  const status = useSelector(selectProductListStatus);
   const dispatch = useDispatch();
   const params = useParams();
-  //console.log(params.id);
   const user = useSelector(selectUserInfo);
 
   const handlecart = (e) => {
     e.preventDefault();
-    const newItem = { ...product, quantity: 1, user: user.id };
-    delete newItem["id"];
-    dispatch(addToCartAsync(newItem));
+    if (items.findIndex((item) => item.productId === product.id) < 0) {
+      const newItem = {
+        ...product,
+        productId: product.id,
+        quantity: 1,
+        user: user.id,
+      };
+      delete newItem["id"];
+      dispatch(addToCartAsync(newItem));
+    } else {
+      console.log("already added");
+    }
   };
   useEffect(() => {
     dispatch(fetchProductByIdAsync(params.id));
   }, [dispatch, params.id]);
   return (
     <>
+      {status === "loading" && (
+        <RotatingLines
+          visible={true}
+          height="96"
+          width="96"
+          color="grey"
+          strokeWidth="5"
+          animationDuration="0.75"
+          ariaLabel="rotating-lines-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+        />
+      )}
       {product && (
         <div className="bg-white">
           <div className="pt-6">

@@ -30,8 +30,10 @@ import {
   selectAllProducts,
   selectBrands,
   selectCategories,
+  selectProductListStatus,
 } from "../productSlice";
 import { ITEM_PER_PAGE } from "../../../../constant";
+import { Grid } from "react-loader-spinner";
 
 const sortOptions = [
   { name: "Price: Low to High", sort: "price", order: "asc", current: false },
@@ -339,12 +341,25 @@ const Productlist = () => {
 
 function Productgrid() {
   const products = useSelector(selectAllProducts);
+  const status = useSelector(selectProductListStatus);
 
   return (
     <div className="lg:col-span-3">
       <div className="bg-white">
         <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
           <div className="mt-2  grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-4">
+            {status === "loading" && (
+              <Grid
+                visible={true}
+                height="80"
+                width="80"
+                color="#4fa94d"
+                ariaLabel="grid-loading"
+                radius="12.5"
+                wrapperStyle={{}}
+                wrapperClass="grid-wrapper"
+              />
+            )}
             {products.map((product) => (
               <Link
                 to={`/productdetails/${product.id}`}
