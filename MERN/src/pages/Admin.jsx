@@ -1,8 +1,6 @@
 import React from "react";
-import logo from "../../../assets/logo.jpg";
-import { Link } from "react-router-dom";
-import Sidebar from "./Sidebar";
-import Productlist from "./Productlist";
+import Sidebar from "../features/Product-list/components/Sidebar";
+import Adminproductlist from "../features/Product-list/components/Adminproductlist";
 
 const Admin = () => {
   return (
@@ -20,7 +18,7 @@ const Admin = () => {
           </button>
         </div>
         <div className="p-5">
-          <Productlist />
+          <Adminproductlist />
         </div>
       </div>
     </div>

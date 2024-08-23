@@ -13,10 +13,10 @@ import Userprofilepage from "./pages/Userprofilepage";
 import Myorderpage from "./pages/Myorderpage";
 import Aboupage from "./pages/Aboupage";
 import Logout from "./features/auth/components/Logout";
-import Admin from "./features/Product-list/components/Admin";
-import { Adminorderpage } from "./pages/Adminorderpage";
 import Adminuserpage from "./pages/Adminuserpage";
 import Adminprofilepage from "./pages/Adminprofilepage";
+import { Adminorderpage } from "./pages/Adminorderpage";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
@@ -90,7 +90,7 @@ function App() {
           }
         />
         <Route path="/log-out" element={<Logout />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin/products" element={<Admin />} />
         <Route path="/admin-order" element={<Adminorderpage />} />
         <Route path="/admin-user" element={<Adminuserpage />} />
         <Route path="/admin/users/:id" element={<Adminprofilepage />} />

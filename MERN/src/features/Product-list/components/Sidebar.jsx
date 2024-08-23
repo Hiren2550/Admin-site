@@ -8,7 +8,7 @@ const Sidebar = () => {
     <>
       <div className="hidden md:flex flex-col w-64 bg-gray-800">
         <div className="flex items-center gap-3 px-4 py-2 min-h-16 bg-gray-900">
-          <Link to={"/admin"}>
+          <Link to={"/admin/products"}>
             <img
               alt="Your Company"
               src={logo}
@@ -37,7 +37,7 @@ const Sidebar = () => {
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
-              Home
+              Back to Normal user
             </Link>
             <Link
               to={"/admin-user"}
@@ -55,7 +55,7 @@ const Sidebar = () => {
               Users
             </Link>
             <Link
-              to={"/admin"}
+              to={"/admin/products"}
               className="flex items-center gap-3 px-4 py-2 text-gray-100 hover:bg-gray-700"
             >
               <svg

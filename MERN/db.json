@@ -6552,7 +6552,18 @@
       "name": "Sir Manager",
       "email": "admin1@gmail.com",
       "password": "Admin@123",
-      "addresses": [],
+      "addresses": [
+        {
+          "firstname": "senior",
+          "lastname": "manager",
+          "email": "admin1@gmail.com",
+          "phone": "7890456789",
+          "street": "Office",
+          "city": "Ahmedabad",
+          "state": "Gujarat",
+          "pincode": "380024"
+        }
+      ],
       "role": "Admin"
     },
     {
@@ -6678,7 +6689,7 @@
         "state": "Gujarat",
         "pincode": "380024"
       },
-      "status": "pending"
+      "status": "Confirm"
     },
     {
       "id": "b5ea",
@@ -6781,7 +6792,110 @@
         "state": "Gujarat",
         "pincode": "380024"
       },
-      "status": "Confirm"
+      "status": "pending"
+    },
+    {
+      "id": "e49c",
+      "items": [
+        {
+          "id": "5869",
+          "title": "Man Plaid Shirt",
+          "description": "The Man Plaid Shirt is a timeless and versatile men's shirt with a classic plaid pattern. Its comfortable fit and casual style make it a wardrobe essential for various occasions.",
+          "category": "shirts",
+          "price": 34.99,
+          "discountPercentage": 17.53,
+          "rating": 3.66,
+          "stock": 65,
+          "tags": [
+            "clothing",
+            "men's shirts"
+          ],
+          "brand": "Classic Wear",
+          "sku": "TWL7HRBB",
+          "weight": 1,
+          "dimensions": {
+            "width": 29.56,
+            "height": 29.84,
+            "depth": 7.77
+          },
+          "warrantyInformation": "Lifetime warranty",
+          "shippingInformation": "Ships in 1 week",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 3,
+              "comment": "Would not buy again!",
+              "date": "2024-05-23T08:56:21.623Z",
+              "reviewerName": "Nora Mills",
+              "reviewerEmail": "nora.mills@x.dummyjson.com"
+            },
+            {
+              "rating": 1,
+              "comment": "Very disappointed!",
+              "date": "2024-05-23T08:56:21.623Z",
+              "reviewerName": "Addison Ward",
+              "reviewerEmail": "addison.ward@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Awesome product!",
+              "date": "2024-05-23T08:56:21.623Z",
+              "reviewerName": "Emily Brown",
+              "reviewerEmail": "emily.brown@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 1,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.623Z",
+            "updatedAt": "2024-05-23T08:56:21.623Z",
+            "barcode": "9383795178668",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/1.png",
+            "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/2.png",
+            "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/3.png",
+            "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/4.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/thumbnail.png",
+          "quantity": 2,
+          "user": "b48b"
+        }
+      ],
+      "user": {
+        "id": "b48b",
+        "name": "Sir Manager",
+        "email": "admin1@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "firstname": "senior",
+            "lastname": "manager",
+            "email": "admin1@gmail.com",
+            "phone": "7890456789",
+            "street": "Office",
+            "city": "Ahmedabad",
+            "state": "Gujarat",
+            "pincode": "380024"
+          }
+        ],
+        "role": "Admin"
+      },
+      "totalAmount": 69.98,
+      "totalQuantity": 2,
+      "paymentMethod": "online",
+      "selectedAddress": {
+        "firstname": "senior",
+        "lastname": "manager",
+        "email": "admin1@gmail.com",
+        "phone": "7890456789",
+        "street": "Office",
+        "city": "Ahmedabad",
+        "state": "Gujarat",
+        "pincode": "380024"
+      },
+      "status": "confirm"
     }
   ]
 }
