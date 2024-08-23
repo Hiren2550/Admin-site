@@ -344,9 +344,7 @@ function Productgrid() {
   const productDelete = (e, productId) => {
     dispatch(deleteProductAsync(productId));
   };
-  const productEdit = (e, productId) => {
-    console.log(productId);
-  };
+
   return (
     <div className="lg:col-span-3">
       <div className="bg-white">
@@ -354,13 +352,14 @@ function Productgrid() {
           <div className="mt-2  grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-4">
             {products.map((product) => (
               <div key={product.id}>
-                <button
-                  type="submit"
-                  onClick={(e) => productEdit(e, product.id)}
-                  className="rounded-md my-2 bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Edit
-                </button>
+                <Link to={`/admin/edit-product/${product.id}`}>
+                  <button
+                    type="submit"
+                    className="rounded-md my-2 bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >
+                    Edit
+                  </button>
+                </Link>
                 <button
                   type="submit"
                   onClick={(e) => productDelete(e, product.id)}

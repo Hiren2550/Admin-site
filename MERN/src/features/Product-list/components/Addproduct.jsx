@@ -5,11 +5,13 @@ import {
   addProductAsync,
   selectBrands,
   selectCategories,
+  selectError,
 } from "../productSlice";
 
 const Addproduct = () => {
   const brands = useSelector(selectBrands);
   const categories = useSelector(selectCategories);
+  const error = useSelector(selectError);
   const {
     register,
     handleSubmit,
@@ -337,7 +339,7 @@ const Addproduct = () => {
             Add Product
           </button>
         </div>
-        {/* {error && <p className="text-xs text-red-600">{error.message}</p>} */}
+        {error && <p className="text-xs text-red-600">{error.message}</p>}
       </form>
     </>
   );

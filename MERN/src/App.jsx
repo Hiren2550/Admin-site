@@ -18,6 +18,7 @@ import Adminprofilepage from "./pages/Adminprofilepage";
 import { Adminorderpage } from "./pages/Adminorderpage";
 import Admin from "./pages/Admin";
 import { Addproductpage } from "./pages/Addproductpage";
+import { Editproductpage } from "./pages/Editproductpage";
 
 function App() {
   return (
@@ -93,6 +94,7 @@ function App() {
         <Route path="/log-out" element={<Logout />} />
         <Route path="/admin/products" element={<Admin />} />
         <Route path="/admin/add-product" element={<Addproductpage />} />
+        <Route path="/admin/edit-product/:id" element={<Editproductpage />} />
         <Route path="/admin/orders" element={<Adminorderpage />} />
         <Route path="/admin/users" element={<Adminuserpage />} />
         <Route path="/admin/users/:id" element={<Adminprofilepage />} />

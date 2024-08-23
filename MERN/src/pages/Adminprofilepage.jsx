@@ -36,8 +36,16 @@ const Adminprofilepage = () => {
     setValue("name", "");
     setValue("email", "");
     dispatch(fetchUserInfoAsync(params.id));
-    setValue("name", user.name);
-    setValue("email", user.email);
+    setValue("name", user.name, {
+      shouldValidate: true,
+      shouldDirty: true,
+      shouldTouch: true,
+    });
+    setValue("email", user.email, {
+      shouldValidate: true,
+      shouldDirty: true,
+      shouldTouch: true,
+    });
   }, [dispatch, user.name, user.email, params.id]);
   return (
     <>
