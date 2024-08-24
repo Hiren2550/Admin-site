@@ -32,7 +32,7 @@ export const deleteCategory = async (req, res) => {
   const id = req.params.id;
   try {
     const category = await Category.findByIdAndDelete(id);
-    res.status(200).json(category);
+    res.status(200).json({ result: "category is deleted" });
   } catch (error) {
     res.status(400).json(error);
   }

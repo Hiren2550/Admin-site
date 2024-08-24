@@ -3,6 +3,8 @@ import mongoose from "mongoose";
 import productsRouter from "./routes/product.route.js";
 import brandsRouter from "./routes/brand.route.js";
 import categoriesRouter from "./routes/category.route.js";
+import usersRouter from "./routes/user.route.js";
+import authRouter from "./routes/auth.route.js";
 const app = express();
 
 app.use(express.json());
@@ -10,6 +12,8 @@ app.use(express.urlencoded());
 app.use("/api/products", productsRouter);
 app.use("/api/brands", brandsRouter);
 app.use("/api/categories", categoriesRouter);
+app.use("/api/auth", authRouter);
+app.use("/api/users", usersRouter);
 
 const main = async () => {
   await mongoose.connect("mongodb://127.0.0.1:27017/test");
@@ -19,6 +23,12 @@ main().catch((error) => console.log(error));
 
 app.get("/", (req, res) => {
   res.json({ message: "API done" });
+});
+
+app.use((err, req, res, next) => {
+  const statuscode = err.statuscode || 500;
+  const message = err.message || "internal Server Error";
+  return res.status(statuscode).json({ success: false, statuscode, message });
 });
 
 app.listen(8000, () => {

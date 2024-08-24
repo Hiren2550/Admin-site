@@ -37,7 +37,7 @@ import { Grid } from "react-loader-spinner";
 
 const sortOptions = [
   { name: "Price: Low to High", sort: "price", order: "asc", current: false },
-  { name: "Price: High to Low", sort: "price ", order: "desc", current: false },
+  { name: "Price: High to Low", sort: "price", order: "desc", current: false },
 ];
 
 // {
@@ -109,7 +109,7 @@ const Productlist = () => {
     }
     fetchData();
   }, [dispatch, filter, sort, page]);
-  const totalItems = 160;
+  const totalItems = 100;
   useEffect(() => {
     setPage(1);
   }, [totalItems, sort]);

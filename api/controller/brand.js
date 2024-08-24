@@ -31,7 +31,7 @@ export const deleteBrand = async (req, res) => {
   const id = req.params.id;
   try {
     const brand = await Brand.findByIdAndDelete(id);
-    res.status(200).json(brand);
+    res.status(200).json({ result: "brand is deleted" });
   } catch (error) {
     res.status(400).json(error);
   }
