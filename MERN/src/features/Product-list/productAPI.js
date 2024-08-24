@@ -1,27 +1,27 @@
 export function fetchAllProducts() {
   return new Promise(async (resolve) => {
-    const response = await fetch("http://localhost:8080/products");
+    const response = await fetch("/api/products");
     const data = await response.json();
     resolve({ data });
   });
 }
 export function fetchProductById(id) {
   return new Promise(async (resolve) => {
-    const response = await fetch(`http://localhost:8080/products/${id}`);
+    const response = await fetch(`/api/products/${id}`);
     const data = await response.json();
     resolve({ data });
   });
 }
 export function fetchAllBrands() {
   return new Promise(async (resolve) => {
-    const response = await fetch("http://localhost:8080/brands");
+    const response = await fetch("/api/brands");
     const data = await response.json();
     resolve({ data });
   });
 }
 export function fetchAllCategories() {
   return new Promise(async (resolve) => {
-    const response = await fetch("http://localhost:8080/categories");
+    const response = await fetch("/api/categories");
     const data = await response.json();
     resolve({ data });
   });
@@ -46,7 +46,7 @@ export function fetchAllProductsByFilter(filter, sort, pagination) {
     queryString += `${key}=${pagination[key]}&`;
   }
   return new Promise(async (resolve) => {
-    const q = `http://localhost:8080/products?${queryString}`;
+    const q = `/api/products?${queryString}`;
     //console.log(q);
     const response = await fetch(q);
     const data = await response.json();
@@ -56,16 +56,13 @@ export function fetchAllProductsByFilter(filter, sort, pagination) {
 
 export function deleteProduct(productId) {
   return new Promise(async (resolve) => {
-    const response = await fetch(
-      "http://localhost:8080/products/" + productId,
-      {
-        method: "DELETE",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(productId),
-      }
-    );
+    const response = await fetch("/api/products/" + productId, {
+      method: "DELETE",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(productId),
+    });
     const data = await response.json();
     resolve({ data });
   });
@@ -73,7 +70,7 @@ export function deleteProduct(productId) {
 
 export function addProduct(productData) {
   return new Promise(async (resolve) => {
-    const response = await fetch("http://localhost:8080/products/", {
+    const response = await fetch("/api/products", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -86,16 +83,13 @@ export function addProduct(productData) {
 }
 export function editProduct(productData) {
   return new Promise(async (resolve) => {
-    const response = await fetch(
-      "http://localhost:8080/products/" + productData.id,
-      {
-        method: "PATCH",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(productData),
-      }
-    );
+    const response = await fetch("/api/products" + productData.id, {
+      method: "PATCH",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(productData),
+    });
     const data = await response.json();
     resolve({ data });
   });
