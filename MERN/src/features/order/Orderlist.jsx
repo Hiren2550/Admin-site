@@ -60,7 +60,7 @@ const Orderlist = () => {
   };
   return (
     <>
-      <div className="mx-auto max-w-screen bg-gray-200">
+      <div className=" w-full bg-gray-200">
         <h1 className="mt-2 text-3xl px-2 pt-4 ml-2  font-bold text-gray-900">
           Order Management
         </h1>
@@ -119,8 +119,8 @@ const Orderlist = () => {
             </div>
           </form>
         )}
-        <div className="mt-2 overflow-hidden rounded-xl bg-white px-6 shadow lg:px-4">
-          <table className="min-w-full border-collapse border-spacing-y-2 border-spacing-x-2">
+        <div className="mt-2 min-w-full rounded-xl bg-white px-6 shadow lg:px-2">
+          <table className="min-w-full  border-spacing-y-2 border-spacing-x-2">
             <thead className="hidden border-b lg:table-header-group">
               <tr className="">
                 <td className="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-2">

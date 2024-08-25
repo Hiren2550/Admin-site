@@ -19,6 +19,7 @@ import { Adminorderpage } from "./pages/Adminorderpage";
 import Admin from "./pages/Admin";
 import { Addproductpage } from "./pages/Addproductpage";
 import { Editproductpage } from "./pages/Editproductpage";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -54,7 +55,9 @@ function App() {
           path="/productdetails/:id"
           element={
             <PrivateRoute>
-              <Productdetailspage />
+              <ToastContainer>
+                <Productdetailspage />
+              </ToastContainer>
             </PrivateRoute>
           }
         />

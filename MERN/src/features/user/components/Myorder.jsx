@@ -5,7 +5,6 @@ import {
   selectUserInfo,
   selectUserOrders,
 } from "../userSlice";
-import Loading from "../../../pages/Loading";
 import { Navigate } from "react-router-dom";
 
 const Myorder = () => {
@@ -42,7 +41,7 @@ const Myorder = () => {
       {userOrders &&
         userOrders.map((order, index) => (
           <section
-            key={order.id}
+            key={index}
             className="py-4 m-5 relative bg-white border rounded"
           >
             <div className="w-full mt-2 max-w-7xl px-4 md:px-5 lg-6 mx-auto">
@@ -106,7 +105,10 @@ const Myorder = () => {
 
               <div className="border-b border-gray-300">
                 {order.items.map((item) => (
-                  <div className="grid grid-cols-7 w-full  py-2 border-gray-100 ">
+                  <div
+                    key={item.id}
+                    className="grid grid-cols-7 w-full  py-2 border-gray-100 "
+                  >
                     <div className="col-span-7 min-[500px]:col-span-2 md:col-span-1">
                       <img
                         src={item.product.thumbnail}
