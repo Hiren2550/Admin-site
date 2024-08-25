@@ -7,6 +7,7 @@ import {
   selectCategories,
   selectError,
 } from "../productSlice";
+import { toast } from "react-toastify";
 
 const Addproduct = () => {
   const brands = useSelector(selectBrands);
@@ -42,6 +43,10 @@ const Addproduct = () => {
       ],
     };
     dispatch(addProductAsync(mainData));
+    toast.success("Product added successfully", {
+      position: "top-right",
+      theme: "dark",
+    });
     reset();
   };
   return (

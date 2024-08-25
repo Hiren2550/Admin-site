@@ -11,6 +11,7 @@ import {
   selectError,
   selectProduct,
 } from "../features/Product-list/productSlice";
+import { toast } from "react-toastify";
 
 export const Editproductpage = () => {
   const product = useSelector(selectProduct);
@@ -105,6 +106,10 @@ export const Editproductpage = () => {
     setForBrand(null);
     setForCategory(null);
     setUpdateSuccess(true);
+    toast.success("Product updated successfully", {
+      position: "top-right",
+      theme: "dark",
+    });
   };
 
   const handleBrand = (e) => {
@@ -454,11 +459,11 @@ export const Editproductpage = () => {
                   Update
                 </button>
               </div>
-              {updateSuccess && (
+              {/* {updateSuccess && (
                 <p className="text-green-500 mt-2">
                   User is updated successfully
                 </p>
-              )}
+              )} */}
               {error && <p className="text-xs text-red-600">{error.message}</p>}
             </form>
           </div>
