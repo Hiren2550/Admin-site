@@ -50,11 +50,12 @@ export const deleteOrder = async (req, res) => {
     res.status(400).json(error);
   }
 };
+
 export const fetchOrderByUser = async (req, res) => {
   const { user } = req.query;
   try {
-    const doc = await Order.findOne({ user: user }).populate("user");
-    res.status(200).json(doc);
+    const order = await Order.find({ user: user }).populate("user");
+    res.status(200).json(order);
   } catch (error) {
     res.status(400).json(error);
   }

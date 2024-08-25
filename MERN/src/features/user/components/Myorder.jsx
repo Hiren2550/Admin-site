@@ -5,13 +5,13 @@ import {
   selectUserInfo,
   selectUserOrders,
 } from "../userSlice";
-import { Navigate } from "react-router-dom";
 import Loading from "../../../pages/Loading";
 
 const Myorder = () => {
   const dispatch = useDispatch();
   const user = useSelector(selectUserInfo);
   let userOrders = useSelector(selectUserOrders);
+  console.log(userOrders);
   userOrders = [...userOrders].reverse();
   useEffect(() => {
     dispatch(fetchLoggedInUserOrdersAsync(user.id));
