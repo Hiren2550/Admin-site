@@ -61,7 +61,6 @@ export function deleteProduct(productId) {
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(productId),
     });
     const data = await response.json();
     resolve({ data });
@@ -83,7 +82,7 @@ export function addProduct(productData) {
 }
 export function editProduct(productData) {
   return new Promise(async (resolve) => {
-    const response = await fetch("/api/products" + productData.id, {
+    const response = await fetch("/api/products/" + productData.id, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

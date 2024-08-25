@@ -114,7 +114,7 @@ const Addproduct = () => {
                   min: { value: 1, message: "price is less than 1" },
                   max: {
                     value: 200000,
-                    message: "price is greater than 20000",
+                    message: "price is greater than 200000",
                   },
                 })}
                 type="number"

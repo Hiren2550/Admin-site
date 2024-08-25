@@ -1,6 +1,6 @@
 export function fetchAllUsers() {
   return new Promise(async (resolve) => {
-    const response = await fetch("/api/auth/users");
+    const response = await fetch("/api/users");
     const data = await response.json();
     resolve({ data });
   });
@@ -8,9 +8,7 @@ export function fetchAllUsers() {
 
 export function fetchLoggedInUserOrders(userId) {
   return new Promise(async (resolve) => {
-    const response = await fetch(
-      "http://localhost:8080/orders?user.id=" + userId
-    );
+    const response = await fetch("/api/orders/userOrders?user=" + userId);
     const data = await response.json();
     resolve({ data });
   });
@@ -44,7 +42,6 @@ export function deleteUser(userId) {
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(userId),
     });
     const data = await response.json();
     resolve({ data });

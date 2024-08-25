@@ -11,6 +11,7 @@ const userSchema = new Schema({
 });
 
 const virtual = userSchema.virtual("id");
+
 virtual.get(function () {
   return this._id;
 });
@@ -21,5 +22,4 @@ userSchema.set("toJSON", {
     delete ret._id;
   },
 });
-
 export const User = mongoose.model("User", userSchema);

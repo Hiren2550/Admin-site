@@ -5,6 +5,8 @@ import brandsRouter from "./routes/brand.route.js";
 import categoriesRouter from "./routes/category.route.js";
 import usersRouter from "./routes/user.route.js";
 import authRouter from "./routes/auth.route.js";
+import cartRouter from "./routes/cart.route.js";
+import ordersRouter from "./routes/order.route.js";
 const app = express();
 
 app.use(express.json());
@@ -14,6 +16,8 @@ app.use("/api/brands", brandsRouter);
 app.use("/api/categories", categoriesRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/users", usersRouter);
+app.use("/api/cart", cartRouter);
+app.use("/api/orders", ordersRouter);
 
 const main = async () => {
   await mongoose.connect("mongodb://127.0.0.1:27017/test");

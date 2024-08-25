@@ -6,9 +6,8 @@ export const createUser = async (req, res) => {
   try {
     const { name, email, role, password } = req.body;
     const user = new User({ name, email, role, password });
-    const data = await user.save();
-    const { password: pass, ...rest } = data._doc;
-    res.status(201).json(rest);
+    const doc = await user.save();
+    res.status(201).json(doc);
   } catch (error) {
     res.status(400).json(error);
   }

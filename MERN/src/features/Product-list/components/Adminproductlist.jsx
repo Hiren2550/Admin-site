@@ -36,7 +36,7 @@ import { ITEM_PER_PAGE } from "../../../../constant";
 
 const sortOptions = [
   { name: "Price: Low to High", sort: "price", order: "asc", current: false },
-  { name: "Price: High to Low", sort: "price ", order: "desc", current: false },
+  { name: "Price: High to Low", sort: "price", order: "desc", current: false },
 ];
 
 // {

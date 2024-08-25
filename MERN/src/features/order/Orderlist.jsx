@@ -34,12 +34,12 @@ const Orderlist = () => {
     dispatch(fetchAllOrdersAsync());
   }, [dispatch]);
   const handleForm = (data) => {
-    dispatch(updateOrderAsync({ ...order, status: data.status }));
+    dispatch(updateOrderAsync({ id: order.id, status: data.status }));
     reset();
     setOpen(!open);
   };
   const handleChange = (e) => {
-    dispatch(updateOrderAsync({ ...order, status: e.target.value }));
+    dispatch(updateOrderAsync({ id: order.id, status: e.target.value }));
     reset();
     setOpen(!open);
   };
@@ -59,7 +59,7 @@ const Orderlist = () => {
   };
   return (
     <>
-      <div className="w-auto bg-gray-200">
+      <div className="mx-auto max-w-screen bg-gray-200">
         <h1 className="mt-2 text-3xl px-2 pt-4 ml-2  font-bold text-gray-900">
           Order Management
         </h1>

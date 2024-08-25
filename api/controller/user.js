@@ -13,8 +13,7 @@ export const fetchUserById = async (req, res) => {
   const id = req.params.id;
   try {
     const user = await User.findById(id);
-    const { password: pass, ...rest } = user._doc;
-    res.status(200).json(rest);
+    res.status(200).json(user);
   } catch (error) {
     res.status(400).json(error);
   }
@@ -28,8 +27,7 @@ export const updateUser = async (req, res) => {
       new: true,
       runValidators: true,
     });
-    const { password: pass, ...rest } = user._doc;
-    res.status(200).json(rest);
+    res.status(200).json(user);
   } catch (error) {
     res.status(400).json(error);
   }
