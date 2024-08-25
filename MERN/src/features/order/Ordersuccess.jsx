@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { resetOrder, selectCurrentOrder } from "./orderSlice";
 import { resetCartAsync } from "../cart/cartSlice";
+import { toast } from "react-toastify";
 
 const Order = () => {
   const params = useParams();

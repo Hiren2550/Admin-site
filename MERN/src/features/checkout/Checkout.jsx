@@ -10,6 +10,7 @@ import {
 import { useForm } from "react-hook-form";
 import { createOrderAsync, selectCurrentOrder } from "../order/orderSlice";
 import { selectUserInfo, updateUserAsync } from "../user/userSlice";
+import { toast } from "react-toastify";
 
 const Checkout = () => {
   const user = useSelector(selectUserInfo);
@@ -46,17 +47,24 @@ const Checkout = () => {
   };
   const handleOrder = () => {
     // console.log(user.id);
-    dispatch(
-      createOrderAsync({
-        items,
-        user: user.id,
-        totalAmount,
-        totalQuantity,
-        paymentMethod,
-        selectedAddress,
-        status: "pending",
-      })
-    );
+    if (selectedAddress) {
+      dispatch(
+        createOrderAsync({
+          items,
+          user: user.id,
+          totalAmount,
+          totalQuantity,
+          paymentMethod,
+          selectedAddress,
+          status: "pending",
+        })
+      );
+    } else {
+      toast.info("Add your address", {
+        position: "top-right",
+        theme: "dark",
+      });
+    }
   };
   return (
     <>
@@ -504,7 +512,7 @@ const Checkout = () => {
                 </p>
                 <div className="mt-6">
                   <button
-                    disabled={user.addresses.length ? false : true}
+                    // disabled={user.addresses.length ? false : true}
                     onClick={handleOrder}
                     className=" w-full cursor-pointer flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                   >

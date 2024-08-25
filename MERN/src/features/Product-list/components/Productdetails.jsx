@@ -13,6 +13,7 @@ import profile from "../../../assets/profile.png";
 import { addToCartAsync, selectCart } from "../../cart/cartSlice";
 import { selectUserInfo } from "../../user/userSlice";
 import { RotatingLines } from "react-loader-spinner";
+import { toast } from "react-toastify";
 
 const colors = [
   { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
@@ -55,7 +56,10 @@ const Productdetails = () => {
       };
       dispatch(addToCartAsync(newItem));
     } else {
-      console.log("already added");
+      toast.info("product already added", {
+        position: "bottom-right",
+        theme: "dark",
+      });
     }
   };
   useEffect(() => {

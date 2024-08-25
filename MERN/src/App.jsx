@@ -19,11 +19,13 @@ import { Adminorderpage } from "./pages/Adminorderpage";
 import Admin from "./pages/Admin";
 import { Addproductpage } from "./pages/Addproductpage";
 import { Editproductpage } from "./pages/Editproductpage";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <BrowserRouter>
+      <ToastContainer />
       <Routes>
         <Route path="/signup" element={<Signuppage />} />
         <Route path="/login" element={<Loginpage />} />
@@ -55,9 +57,7 @@ function App() {
           path="/productdetails/:id"
           element={
             <PrivateRoute>
-              <ToastContainer>
-                <Productdetailspage />
-              </ToastContainer>
+              <Productdetailspage />
             </PrivateRoute>
           }
         />
