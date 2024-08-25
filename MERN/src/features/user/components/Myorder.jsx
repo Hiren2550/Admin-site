@@ -6,12 +6,13 @@ import {
   selectUserOrders,
 } from "../userSlice";
 import Loading from "../../../pages/Loading";
+import { Navigate } from "react-router-dom";
 
 const Myorder = () => {
   const dispatch = useDispatch();
   const user = useSelector(selectUserInfo);
   let userOrders = useSelector(selectUserOrders);
-  console.log(userOrders);
+  // console.log(userOrders);
   userOrders = [...userOrders].reverse();
   useEffect(() => {
     dispatch(fetchLoggedInUserOrdersAsync(user.id));
@@ -32,8 +33,13 @@ const Myorder = () => {
   };
   return (
     <>
-      {!userOrders.length && <Loading />}
-      {userOrders.length &&
+      {userOrders.length < 1 && <Navigate to="/" replace={true}></Navigate>}
+      {userOrders.length < 1 && (
+        <p className="text-xl mt-10 text-center text-slate-700">
+          No more Orders
+        </p>
+      )}
+      {userOrders &&
         userOrders.map((order, index) => (
           <section
             key={order.id}
@@ -103,8 +109,8 @@ const Myorder = () => {
                   <div className="grid grid-cols-7 w-full  py-2 border-gray-100 ">
                     <div className="col-span-7 min-[500px]:col-span-2 md:col-span-1">
                       <img
-                        src={item.thumbnail}
-                        alt={item.title}
+                        src={item.product.thumbnail}
+                        alt={item.product.title}
                         className="w-full rounded-xl mb-2"
                       />
                     </div>
@@ -112,10 +118,10 @@ const Myorder = () => {
                       <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-center justify-between">
                         <div className="flex flex-col justify-center ">
                           <h5 className="font-manrope font-semibold leading-9 text-black">
-                            {item.title}
+                            {item.product.title}
                           </h5>
                           <p className="font-normal leading-8 text-gray-500">
-                            {item.brand}
+                            {item.product.brand}
                           </p>
                           <p className="font-normal leading-8 text-gray-500">
                             Quantity : {item.quantity}
@@ -123,7 +129,7 @@ const Myorder = () => {
                         </div>
 
                         <h5 className="font-manrope font-semibold text-xl leading-10 text-black sm:text-right flex   sm:justify-center">
-                          $ {item.price}
+                          $ {item.product.price}
                         </h5>
                       </div>
                     </div>
@@ -146,7 +152,7 @@ const Myorder = () => {
                       Subtotal
                     </p>
                     <p className="font-semibold leading-8 text-gray-900">
-                      $ {order.totalAmount}
+                      $ {Math.ceil(order.totalAmount)}
                     </p>
                   </div>
                 </div>

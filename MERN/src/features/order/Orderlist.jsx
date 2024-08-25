@@ -21,7 +21,8 @@ const Orderlist = () => {
     formState: { errors },
   } = useForm();
   const dispatch = useDispatch();
-  const orders = useSelector(selectAllOrders);
+  let orders = useSelector(selectAllOrders);
+  orders = [...orders].reverse();
   const order = useSelector(selectOrder);
   const handleEdit = (e, orderId) => {
     dispatch(fetchOrderByIdAsync(orderId));

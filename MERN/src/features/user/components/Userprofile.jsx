@@ -192,8 +192,8 @@ function Userprofile() {
             >
               <Link to={`/my-orders`}>
                 <img
-                  src={order.items[0].thumbnail}
-                  alt={order.items[0].title}
+                  src={order.items[0].product.thumbnail}
+                  alt={order.items[0].product.title}
                   className="w-20 h-20 object-contain"
                 />
               </Link>
@@ -207,7 +207,9 @@ function Userprofile() {
                 <div className="text-slate-700 ">
                   {order.totalQuantity} Items
                 </div>
-                <div className="text-slate-700 ">$ {order.totalAmount}</div>
+                <div className="text-slate-700 ">
+                  $ {Math.ceil(order.totalAmount)}
+                </div>
               </div>
             </div>
           ))}
