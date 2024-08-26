@@ -49,6 +49,8 @@ export function deleteUser(userId) {
 }
 export function signOut() {
   return new Promise(async (resolve) => {
-    resolve({ message: "sign out done" });
+    const response = await fetch("/api/auth/signout");
+    const data = await response.json();
+    resolve({ data });
   });
 }

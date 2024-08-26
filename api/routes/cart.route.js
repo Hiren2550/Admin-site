@@ -6,12 +6,13 @@ import {
   fetchCartByUser,
   updateCart,
 } from "../controller/cart.js";
+import { verifyToken } from "../utils/verifyUser.js";
 const router = express.Router();
 
 router
-  .post("/", addToCart)
-  .get("/", fetchCartByUser)
-  .delete("/:id", deleteItemFromCart)
-  .patch("/:id", updateCart);
+  .post("/", verifyToken, addToCart)
+  .get("/", verifyToken, fetchCartByUser)
+  .delete("/:id", verifyToken, deleteItemFromCart)
+  .patch("/:id", verifyToken, updateCart);
 
 export default router;

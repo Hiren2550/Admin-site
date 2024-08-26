@@ -7,14 +7,15 @@ import {
   fetchOrderByUser,
   updateOrder,
 } from "../controller/order.js";
+import { verifyToken } from "../utils/verifyUser.js";
 const router = express.Router();
 
 router
-  .get("/", fetchAllOrders)
-  .post("/", createOrder)
-  .get("/order", fetchOrderByUser)
-  .get("/:id", fetchOrderById)
-  .patch("/:id", updateOrder)
-  .delete("/:id", deleteOrder);
+  .get("/", verifyToken, fetchAllOrders)
+  .post("/", verifyToken, createOrder)
+  .get("/order", verifyToken, fetchOrderByUser)
+  .get("/:id", verifyToken, fetchOrderById)
+  .patch("/:id", verifyToken, updateOrder)
+  .delete("/:id", verifyToken, deleteOrder);
 
 export default router;
