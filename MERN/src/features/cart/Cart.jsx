@@ -2,7 +2,12 @@ import React from "react";
 import { useState } from "react";
 
 import { Link } from "react-router-dom";
-import { deleteItemAsync, selectCart, updateCartAsync } from "./cartSlice";
+import {
+  deleteItemAsync,
+  selectCart,
+  selectCartLoad,
+  updateCartAsync,
+} from "./cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 
@@ -11,6 +16,7 @@ const Cart = () => {
   const dispatch = useDispatch();
 
   let items = useSelector(selectCart);
+  const cartLoad = useSelector(selectCartLoad);
   items = [...items].reverse();
   const handleQtyChange = (e, item) => {
     dispatch(updateCartAsync({ id: item.id, quantity: e.target.value }));
@@ -28,7 +34,9 @@ const Cart = () => {
   // console.log(totalQuantity);
   return (
     <>
-      {!items.length && <Navigate to={"/"} replace={true}></Navigate>}
+      {!items.length && cartLoad && (
+        <Navigate to={"/"} replace={true}></Navigate>
+      )}
       <div className="my-8 mx-auto max-w-6xl px-4 py-4 sm:px-6 lg:px-8 bg-white border border-gray-200">
         <h1 className="text-4xl my-2  font-semibold tracking-tight text-gray-900">
           Cart
