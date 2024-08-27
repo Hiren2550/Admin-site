@@ -21,8 +21,16 @@ import { Addproductpage } from "./pages/Addproductpage";
 import { Editproductpage } from "./pages/Editproductpage";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useDispatch, useSelector } from "react-redux";
+import { authUserAsync, selectLoggedInUser } from "./features/auth/authSlice";
+import { useEffect } from "react";
 
 function App() {
+  const dispatch = useDispatch();
+  const user = useSelector(selectLoggedInUser);
+  useEffect(() => {
+    dispatch(authUserAsync());
+  }, [dispatch]);
   return (
     <BrowserRouter>
       <ToastContainer />

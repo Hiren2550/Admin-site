@@ -32,6 +32,7 @@ const Adminprofilepage = () => {
   };
   const params = useParams();
   const user = useSelector(selectUserInfo);
+  console.log(user);
   useEffect(() => {
     setValue("name", "");
     setValue("email", "");
