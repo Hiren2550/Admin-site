@@ -1,11 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { selectLoggedInUser } from "../authSlice";
+import { selectCheck, selectLoggedInUser } from "../authSlice";
 import { Navigate } from "react-router-dom";
 
 const PrivateRoute = ({ children }) => {
   const user = useSelector(selectLoggedInUser);
-  if (!user) {
+  const userCheck = useSelector(selectCheck);
+  if (userCheck && !user) {
     return <Navigate to={"/login"} replace={true}></Navigate>;
   }
 
