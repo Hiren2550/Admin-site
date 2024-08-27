@@ -28,7 +28,9 @@ import { useEffect } from "react";
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(authUserAsync());
+    if (window.location.pathname !== "/login") {
+      dispatch(authUserAsync());
+    }
   }, [dispatch]);
   return (
     <BrowserRouter>

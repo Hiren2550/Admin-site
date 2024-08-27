@@ -10,6 +10,7 @@ import {
   updateUserAsync,
 } from "../features/user/userSlice";
 import { useParams } from "react-router-dom";
+import { selectCheck } from "../features/auth/authSlice";
 
 const Adminprofilepage = () => {
   const [updateSuccess, setUpdateSuccess] = useState(false);
@@ -33,6 +34,7 @@ const Adminprofilepage = () => {
   const params = useParams();
   const user = useSelector(selectUserInfo);
   // console.log(user);
+  const userCheck = useSelector(selectCheck);
   useEffect(() => {
     setValue("name", "");
     setValue("email", "");
@@ -50,7 +52,7 @@ const Adminprofilepage = () => {
   }, [dispatch, user.name, user.email, params.id]);
   return (
     <>
-      {user && (
+      {userCheck && user && (
         <div className=" w-dvw flex h-screen  bg-gray-100">
           {/* sidebar */}
           <Sidebar />
