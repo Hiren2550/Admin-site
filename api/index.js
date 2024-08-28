@@ -9,9 +9,19 @@ import authRouter from "./routes/auth.route.js";
 import cartRouter from "./routes/cart.route.js";
 import ordersRouter from "./routes/order.route.js";
 import cookieParser from "cookie-parser";
+import nodemailer from "nodemailer";
 dotenv.config();
 
 const app = express();
+const transporter = nodemailer.createTransport({
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false, // Use `true` for port 465, `false` for all other ports
+  auth: {
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASSWORD,
+  },
+});
 
 app.use(express.json());
 app.use(express.urlencoded());
@@ -35,6 +45,21 @@ app.get("/", (req, res) => {
   res.json({ message: "API done" });
 });
 
+app.post("/mail", async (req, res) => {
+  const to = req.body.email;
+  const resetPage = "https://www.google.com/";
+  const subject = "reset password for Ecommerce website user";
+  const html = `<P>Click<a href='${resetPage}'>here</a>to Reset your password</p>`;
+  const text = "This is reset password action";
+  const info = await transporter.sendMail({
+    from: '"Ecommerce Website" <dummyhiren090@gmail.com>', // sender address
+    to,
+    subject,
+    html,
+    text,
+  });
+  res.json(info);
+});
 app.use((err, req, res, next) => {
   const statuscode = err.statuscode || 500;
   const message = err.message || "internal Server Error";
