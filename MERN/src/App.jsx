@@ -24,6 +24,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useDispatch } from "react-redux";
 import { authUserAsync } from "./features/auth/authSlice";
 import { useEffect } from "react";
+import Resetpassword from "./features/auth/components/Resetpassword";
 
 function App() {
   const dispatch = useDispatch();
@@ -160,6 +161,7 @@ function App() {
             </PrivateRoute>
           }
         />
+        <Route path="/reset-password" element={<Resetpassword />} />
         <Route path="*" element={<Pagenotfound />} />
         {/* </Route> */}
       </Routes>
