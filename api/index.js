@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import path from "path";
 import bcryptjs from "bcryptjs";
 import productsRouter from "./routes/product.route.js";
 import brandsRouter from "./routes/brand.route.js";
@@ -16,6 +17,7 @@ import crypto from "crypto";
 dotenv.config();
 
 const app = express();
+const __dirname = path.resolve();
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 587,
@@ -44,10 +46,6 @@ const main = async () => {
 };
 main().catch((error) => console.log(error));
 
-app.get("/", (req, res) => {
-  res.json({ message: "API done" });
-});
-
 app.post("/api/mail", async (req, res) => {
   const user = await User.findOne({ email: req.body.email });
   if (user) {
@@ -57,7 +55,7 @@ app.post("/api/mail", async (req, res) => {
 
     const to = req.body.email;
     const resetPageLink =
-      "http://localhost:5173/reset-password?token=" +
+      "https://e-commerce-15i5.onrender.com/reset-password?token=" +
       token +
       "&email=" +
       req.body.email;
@@ -105,6 +103,11 @@ app.post("/api/reset-password", async (req, res) => {
   }
 });
 
+app.use(express.static(path.join(__dirname, "MERN/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "MERN", "dist", "index.html"));
+});
 app.use((err, req, res, next) => {
   const statuscode = err.statuscode || 500;
   const message = err.message || "internal Server Error";
