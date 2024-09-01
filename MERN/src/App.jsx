@@ -163,9 +163,22 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route path="/payment-success" element={<Paymentsuccess />} />
-        <Route path="/payment-cancel" element={<Paymentcancel />} />
-        <Route path="/reset-password" element={<Resetpassword />} />
+        <Route
+          path="/payment-success"
+          element={
+            <PrivateRoute>
+              <Paymentsuccess />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/payment-cancel"
+          element={
+            <PrivateRoute>
+              <Paymentcancel />
+            </PrivateRoute>
+          }
+        />
         <Route path="/reset-password" element={<Resetpassword />} />
         <Route path="*" element={<Pagenotfound />} />
         {/* </Route> */}

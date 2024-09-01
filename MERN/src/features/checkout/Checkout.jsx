@@ -70,7 +70,7 @@ const Checkout = () => {
   const tempOrder = {
     items,
     user: user.id,
-    totalAmount,
+    totalAmount: Math.ceil(totalAmount),
     totalQuantity,
     paymentMethod,
     selectedAddress,
@@ -78,6 +78,7 @@ const Checkout = () => {
   };
   const makepayment = async () => {
     if (paymentMethod === "online") {
+      handleOrder();
       const stripe = await loadStripe(
         "pk_test_51PuIfZ05kO4vvSCr5vtSSp8RMhe8XzzbYLzbOpOFvkXqU2LrYakSpSm8gJMAxce7kASfk3IKMCoZT8FUt44GgVfR00u8Ld0kCa"
       );
@@ -107,7 +108,7 @@ const Checkout = () => {
   return (
     <>
       {!items.length && <Navigate to={"/"} replace={true}></Navigate>}
-      {currentOrder && (
+      {paymentMethod === "cash" && currentOrder && (
         <Navigate
           to={`/order-success/${currentOrder.id}`}
           replace={true}

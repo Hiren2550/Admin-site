@@ -117,7 +117,7 @@ app.post("/api/payment", async (req, res) => {
             product_data: {
               name: "Products",
             },
-            unit_amount: Math.round(order.totalAmount * 100), // Amount in cents (e.g., $20.00)
+            unit_amount: order.totalAmount * 100, // Amount in cents (e.g., $20.00)
           },
           quantity: order.totalQuantity,
         },
